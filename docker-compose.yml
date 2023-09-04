@@ -1,18 +1,20 @@
 version: '3'
 services:
-  
-  postgres:
+  postgres-db:
     image: postgres
     environment:
-      POSTGRES_USER: your_username
-      POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: your_database
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: gamedb
     ports:
       - "5432:5432"
 
-  nodejs-app:
+  app:
     build: .
     ports:
       - "3000:3000"
     depends_on:
-      - postgres
+      - postgres-db
+    volumes:
+      - .:/app
+    command: ["npm", "run", "dev:container"]
