@@ -11,10 +11,7 @@ export const createGame = (req: Request, res: Response) => {
 };
 
 export const getGames = (req: Request, res: Response) => {
-  res.json([{
-    id: "a",
-    body: "aabas"
-  }]);
+  res.json([]);
 };
 
 export const getGameById = (req: Request, res: Response) => {
