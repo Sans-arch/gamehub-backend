@@ -6,7 +6,7 @@ export interface IGame {
   stores: any[];
 }
 
-interface IRawgGame {
+interface IExternalGameFormat {
   name: string;
   slug: string;
   platforms: any[];
@@ -25,7 +25,7 @@ export class Game implements IGame {
   esrbRating: any;
   backgroundImage: string;
 
-  constructor(game: IRawgGame) {
+  constructor(game: IExternalGameFormat) {
     this.name = game.name;
     this.released = game.released;
     this.slug = game.slug;
