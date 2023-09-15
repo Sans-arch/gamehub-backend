@@ -1,63 +1,11 @@
-import { Request, Response } from 'express'
-import { Game } from '../models/game'
+import Express from 'express';
 
-const games: Game[] = []
+import { getAllGamesFromExternalAPI } from '../services/gamesService';
 
-export const createGame = (req: Request, res: Response) => {
-  const { title, platform, genre } = req.body
+async function getAllGames(req: Express.Request, res: Express.Response) {
+  const games = await getAllGamesFromExternalAPI();
 
-  const newGame: Game = {
-    id: games.length + 1,
-    title,
-    platform,
-    genre,
-  }
-
-  games.push(newGame)
-
-  return res.status(201).json(newGame)
+  return res.json(games);
 }
 
-export const getGames = (req: Request, res: Response) => {
-  res.json([])
-}
-
-export const getGameById = (req: Request, res: Response) => {
-  const id = parseInt(req.params.id, 10)
-  const game = games.find(g => g.id === id)
-
-  if (!game) {
-    return res.status(404).json({ message: 'Game not found' })
-  }
-
-  return res.json(game)
-}
-
-export const updateGame = (req: Request, res: Response) => {
-  const id = parseInt(req.params.id, 10)
-  const game = games.find(g => g.id === id)
-
-  if (!game) {
-    return res.status(404).json({ message: 'Game not found' })
-  }
-
-  const { title, platform, genre } = req.body
-  game.title = title
-  game.platform = platform
-  game.genre = genre
-
-  return res.json(game)
-}
-
-export const deleteGame = (req: Request, res: Response) => {
-  const id = parseInt(req.params.id, 10)
-  const gameIndex = games.findIndex(g => g.id === id)
-
-  if (gameIndex === -1) {
-    return res.status(404).json({ message: 'Game not found' })
-  }
-
-  games.splice(gameIndex, 1)
-
-  return res.status(204).send()
-}
+export default { getAllGames };

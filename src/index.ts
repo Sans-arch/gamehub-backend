@@ -1,23 +1,17 @@
-import * as dotenv from 'dotenv'
-import express from 'express'
-import gamesRouter from './routes/games'
-import { pool } from './config/db'
+import * as dotenv from 'dotenv';
+import express from 'express';
 
-dotenv.config()
+import gamesRoutes from './routes/gamesRoute';
 
-const app = express()
+dotenv.config();
 
-app.use(express.json())
+const app = express();
 
-app.use((req: any, res, next) => {
-  req.db = pool
-  next()
-})
+app.use(express.json());
 
-app.use('/games', gamesRouter)
+app.use('/games', gamesRoutes);
 
-const port = process.env.APP_PORT || 3000
-
+const port = process.env.APP_PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`)
-})
+  console.log(`Server is running at http://localhost:${port} 🚀`);
+});
