@@ -1,21 +1,26 @@
-class User {
-  private id: number;
-  private name: string;
-  private email: string;
-  private password: string;
-  private createdAt: Date;
+import { v4 as uuidv4 } from 'uuid';
 
-  constructor(
-    id: number,
-    name: string,
-    email: string,
-    password: string,
-    createdAt: Date,
-  ) {
-    this.id = id;
+interface IUserConstructor {
+  id?: string;
+  name: string;
+  email: string;
+  password: string;
+  createdAt?: Date;
+}
+
+export class User {
+  id: string;
+  name: string;
+  email: string;
+  password: string;
+  createdAt: Date;
+
+  constructor({ id, name, email, password, createdAt }: IUserConstructor) {
+    this.id = id ?? uuidv4();
     this.name = name;
     this.email = email;
     this.password = password;
-    this.createdAt = createdAt;
+    this.createdAt = createdAt ?? new Date();
   }
 }
+
