@@ -1,4 +1,5 @@
-import { AuthService } from "./AuthService";
+import { UserDTO } from '../dtos/UserDTO';
+import { AuthService } from './AuthService';
 
 export class AuthController {
   service: AuthService;
@@ -14,8 +15,8 @@ export class AuthController {
       return {
         code: 400,
         body: {
-          message: "Name, email and password are required."
-        }
+          message: 'Name, email and password are required.',
+        },
       };
     }
 
@@ -23,14 +24,14 @@ export class AuthController {
       const user = this.service.register(name, email, password);
       return {
         code: 201,
-        body: user
+        body: user,
       };
     } catch (error: any) {
       return {
         code: 400,
         body: {
-          message: error.message
-        }
+          message: error.message,
+        },
       };
     }
   }
@@ -42,8 +43,8 @@ export class AuthController {
       return {
         code: 400,
         body: {
-          message: "Email and password are required."
-        }
+          message: 'Email and password are required.',
+        },
       };
     }
 
@@ -52,16 +53,15 @@ export class AuthController {
 
       return {
         code: 200,
-        body: body
+        body: new UserDTO(body),
       };
     } catch (error: any) {
       return {
         code: 200,
         body: {
-          message: error.message
-        }
+          message: error.message,
+        },
       };
     }
-
   }
 }
