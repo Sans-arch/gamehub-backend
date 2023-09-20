@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Game } from '../models/gamesModel';
+import { Game } from '../models/gameModel';
 
 export async function getAllGamesFromExternalAPI() {
   try {

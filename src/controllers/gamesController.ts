@@ -1,11 +1,11 @@
-import Express from 'express';
 
+import { FastifyRequest, FastifyReply } from 'fastify';
 import { getAllGamesFromExternalAPI } from '../services/gamesService';
 
-async function getAllGames(req: Express.Request, res: Express.Response) {
+async function getAllGames(req: FastifyRequest, reply: FastifyReply) {
   const games = await getAllGamesFromExternalAPI();
 
-  return res.json(games);
+  return reply.code(200).send(games);
 }
 
 export default { getAllGames };

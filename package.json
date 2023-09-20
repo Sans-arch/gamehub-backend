@@ -14,6 +14,7 @@
   "author": "Santiago Negreira",
   "license": "MIT",
   "dependencies": {
+    "@fastify/postgres": "^5.2.0",
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.17",
     "@types/jsonwebtoken": "^9.0.3",
