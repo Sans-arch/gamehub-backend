@@ -4,8 +4,8 @@ import fastify, {
   FastifyReply,
   DoneFuncWithErrOrRes,
 } from 'fastify';
-import { UserRepository } from './auth/UserRepository';
-import { AuthService } from './auth/AuthService';
+import { UserRepository } from './repositories/UserRepository';
+import { AuthService } from './services/AuthService';
 import { AuthController } from './auth/AuthController';
 
 dotenv.config();

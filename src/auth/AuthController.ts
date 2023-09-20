@@ -1,5 +1,5 @@
 import { UserDTO } from '../dtos/UserDTO';
-import { AuthService } from './AuthService';
+import { AuthService } from '../services/AuthService';
 
 export class AuthController {
   service: AuthService;
