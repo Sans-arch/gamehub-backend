@@ -12,7 +12,7 @@ export class UserDTO {
   token: string;
 
   constructor({ token, user }: IUserDTOConstructor) {
-    const { id, name, email } = user;
+    const { name, email } = user;
 
     this.name = name;
     this.email = email;

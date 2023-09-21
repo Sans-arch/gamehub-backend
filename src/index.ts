@@ -1,33 +1,27 @@
 import * as dotenv from 'dotenv';
 import fastify from 'fastify';
-import { UserRepository } from './repositories/UserRepository';
-import { AuthService } from './services/AuthService';
-import { AuthController } from './auth/AuthController';
+import cors from '@fastify/cors';
+import formBody from '@fastify/formbody';
+
 import { gamesRoute } from './routes/gamesRoute';
+import { authRoute } from './routes/authRoute';
 
 dotenv.config();
 
-const server = fastify({
-  logger: true,
+export const server = fastify({
+  logger: false,
 });
 
-const userRepository = new UserRepository();
-const authService = new AuthService(userRepository);
-const authController = new AuthController(authService);
+const corsOptions = {
+  credentials: true,
+  origin: process.env.APP_CORS_ALLOWED_ORIGINS,
+};
 
+server.register(cors, corsOptions);
+server.register(formBody);
+
+server.register(authRoute);
 server.register(gamesRoute);
-
-server.post('/api/auth/register', (request, reply) => {
-  const { code, body } = authController.register(request);
-
-  reply.code(code).send(body);
-});
-
-server.post('/api/auth/login', (request, reply) => {
-  const { code, body } = authController.login(request);
-
-  reply.code(code).send(body);
-});
 
 server.listen({
   port: Number(process.env.APP_PORT) || 5765,
