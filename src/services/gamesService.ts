@@ -1,4 +1,7 @@
 import axios from 'axios';
+import fs from 'node:fs';
+import path from 'node:path';
+
 import { Game } from '../models/gameModel';
 
 export async function getAllGamesFromExternalAPI() {
@@ -18,4 +21,12 @@ export async function getAllGamesFromExternalAPI() {
   } catch (error) {
     throw new Error('Erro ao buscar jogos da API externa');
   }
+}
+
+export async function getAllGamesFromMock() {
+  const mockFileName = 'mocked-api-games.json';
+  const mockFilePath = path.join(__dirname, '..', 'mocks', mockFileName);
+
+  const data = fs.readFileSync(mockFilePath, 'utf-8');
+  return JSON.parse(data);
 }

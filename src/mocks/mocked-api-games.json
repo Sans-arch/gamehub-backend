@@ -1,0 +1,3013 @@
+[
+  {
+    "name": "Grand Theft Auto V",
+    "released": "2013-09-17",
+    "slug": "grand-theft-auto-v",
+    "platforms": [
+      {
+        "platform": {
+          "id": 187,
+          "name": "PlayStation 5",
+          "slug": "playstation5",
+          "image": null,
+          "year_end": null,
+          "year_start": 2020,
+          "games_count": 934,
+          "image_background": "https://media.rawg.io/media/games/3ea/3ea3c9bbd940b6cb7f2139e42d3d443f.jpg"
+        },
+        "released_at": "2013-09-17",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 186,
+          "name": "Xbox Series S/X",
+          "slug": "xbox-series-x",
+          "image": null,
+          "year_end": null,
+          "year_start": 2020,
+          "games_count": 803,
+          "image_background": "https://media.rawg.io/media/games/b34/b3419c2706f8f8dbe40d08e23642ad06.jpg"
+        },
+        "released_at": "2013-09-17",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2013-09-17",
+        "requirements_en": {
+          "minimum": "Minimum:OS: Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1, Windows Vista 64 Bit Service Pack 2* (*NVIDIA video card recommended if running Vista OS)Processor: Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHzMemory: 4 GB RAMGraphics: NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)Storage: 72 GB available spaceSound Card: 100% DirectX 10 compatibleAdditional Notes: Over time downloadable content and programming changes will change the system requirements for this game.  Please refer to your hardware manufacturer and www.rockstargames.com/support for current compatibility information. Some system components such as mobile chipsets, integrated, and AGP graphics cards may be incompatible. Unlisted specifications may not be supported by publisher.     Other requirements:  Installation and online play requires log-in to Rockstar Games Social Club (13+) network; internet connection required for activation, online play, and periodic entitlement verification; software installations required including Rockstar Games Social Club platform, DirectX , Chromium, and Microsoft Visual C++ 2008 sp1 Redistributable Package, and authentication software that recognizes certain hardware attributes for entitlement, digital rights management, system, and other support purposes.     SINGLE USE SERIAL CODE REGISTRATION VIA INTERNET REQUIRED; REGISTRATION IS LIMITED TO ONE ROCKSTAR GAMES SOCIAL CLUB ACCOUNT (13+) PER SERIAL CODE; ONLY ONE PC LOG-IN ALLOWED PER SOCIAL CLUB ACCOUNT AT ANY TIME; SERIAL CODE(S) ARE NON-TRANSFERABLE ONCE USED; SOCIAL CLUB ACCOUNTS ARE NON-TRANSFERABLE.  Partner Requirements:  Please check the terms of service of this site before purchasing this software.",
+          "recommended": "Recommended:OS: Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1Processor: Intel Core i5 3470 @ 3.2GHz (4 CPUs) / AMD X8 FX-8350 @ 4GHz (8 CPUs)Memory: 8 GB RAMGraphics: NVIDIA GTX 660 2GB / AMD HD 7870 2GBStorage: 72 GB available spaceSound Card: 100% DirectX 10 compatibleAdditional Notes:"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2013-09-17",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2013-09-17",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2013-09-17",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2013-09-17",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 290375,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 438095,
+        "store": {
+          "id": 11,
+          "name": "Epic Games",
+          "slug": "epic-games",
+          "domain": "epicgames.com",
+          "games_count": 1266,
+          "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+        }
+      },
+      {
+        "id": 290376,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 290377,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      },
+      {
+        "id": 290378,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+  },
+  {
+    "name": "The Witcher 3: Wild Hunt",
+    "released": "2015-05-18",
+    "slug": "the-witcher-3-wild-hunt",
+    "platforms": [
+      {
+        "platform": {
+          "id": 186,
+          "name": "Xbox Series S/X",
+          "slug": "xbox-series-x",
+          "image": null,
+          "year_end": null,
+          "year_start": 2020,
+          "games_count": 803,
+          "image_background": "https://media.rawg.io/media/games/b34/b3419c2706f8f8dbe40d08e23642ad06.jpg"
+        },
+        "released_at": "2015-05-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2015-05-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 7,
+          "name": "Nintendo Switch",
+          "slug": "nintendo-switch",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5315,
+          "image_background": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+        },
+        "released_at": "2015-05-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2015-05-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2015-05-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 187,
+          "name": "PlayStation 5",
+          "slug": "playstation5",
+          "image": null,
+          "year_end": null,
+          "year_start": 2020,
+          "games_count": 934,
+          "image_background": "https://media.rawg.io/media/games/3ea/3ea3c9bbd940b6cb7f2139e42d3d443f.jpg"
+        },
+        "released_at": "2015-05-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 354780,
+        "store": {
+          "id": 5,
+          "name": "GOG",
+          "slug": "gog",
+          "domain": "gog.com",
+          "games_count": 5484,
+          "image_background": "https://media.rawg.io/media/games/713/713269608dc8f2f40f5a670a14b2de94.jpg"
+        }
+      },
+      {
+        "id": 3565,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 305376,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 312313,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      },
+      {
+        "id": 676022,
+        "store": {
+          "id": 6,
+          "name": "Nintendo Store",
+          "slug": "nintendo",
+          "domain": "nintendo.com",
+          "games_count": 8885,
+          "image_background": "https://media.rawg.io/media/screenshots/88b/88b5f27f07d6ca2f8a3cd0b36e03a670.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
+  },
+  {
+    "name": "Portal 2",
+    "released": "2011-04-18",
+    "slug": "portal-2",
+    "platforms": [
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2011-04-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2011-04-18",
+        "requirements_en": null,
+        "requirements_ru": {
+          "minimum": "Core 2 Duo/Athlon X2 2 ГГц,1 Гб памяти,GeForce 7600/Radeon X800,10 Гб на винчестере,интернет-соединение",
+          "recommended": "Core 2 Duo/Athlon X2 2.5 ГГц,2 Гб памяти,GeForce GTX 280/Radeon HD 2600,10 Гб на винчестере,интернет-соединение"
+        }
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2011-04-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 6,
+          "name": "Linux",
+          "slug": "linux",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 75485,
+          "image_background": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+        },
+        "released_at": "2011-04-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 5,
+          "name": "macOS",
+          "slug": "macos",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 102027,
+          "image_background": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg"
+        },
+        "released_at": "2011-04-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2011-04-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 465889,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      },
+      {
+        "id": 13134,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 4526,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 33916,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 2,
+      "name": "Everyone 10+",
+      "slug": "everyone-10-plus"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/2ba/2bac0e87cf45e5b508f227d281c9252a.jpg"
+  },
+  {
+    "name": "Tomb Raider (2013)",
+    "released": "2013-03-05",
+    "slug": "tomb-raider",
+    "platforms": [
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2013-03-05",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 5,
+          "name": "macOS",
+          "slug": "macos",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 102027,
+          "image_background": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg"
+        },
+        "released_at": "2013-03-05",
+        "requirements_en": {
+          "minimum": "Minimum:\r\n\r\nOS: macOS 10.9.1\r\n\r\nProcessor: 2.0GHz Intel or greater\r\n\r\nMemory: 4GB\r\n\r\nGraphics: 512Mb AMD 4850, 512Mb Nvidia 650M, Intel HD4000\r\n\r\nHard Drive: 14GB"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2013-03-05",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong>Windows XP / Windows Vista / Windows 7<br>\t</li><li><strong>Processor:</strong>1.8 GHz Processor<br>\t</li><li><strong>Memory:</strong>512 MB RAM<br>\t</li><li><strong>Graphics:</strong>3D graphics card compatible with DirectX 9<br>\t</li><li><strong>DirectX®:</strong>9.0<br>\t</li><li><strong>Hard Drive:</strong>2 GB HD space</li></ul>"
+        },
+        "requirements_ru": {
+          "minimum": "i486-100, 8 Мб",
+          "recommended": "Pentium 166, 16 Мб"
+        }
+      },
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2013-03-05",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2013-03-05",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2013-03-05",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 33824,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      },
+      {
+        "id": 13151,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 5640,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 218233,
+        "store": {
+          "id": 8,
+          "name": "Google Play",
+          "slug": "google-play",
+          "domain": "play.google.com",
+          "games_count": 17056,
+          "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
+        }
+      },
+      {
+        "id": 79036,
+        "store": {
+          "id": 4,
+          "name": "App Store",
+          "slug": "apple-appstore",
+          "domain": "apps.apple.com",
+          "games_count": 75329,
+          "image_background": "https://media.rawg.io/media/games/960/960b601d9541cec776c5fa42a00bf6c4.jpg"
+        }
+      },
+      {
+        "id": 713685,
+        "store": {
+          "id": 11,
+          "name": "Epic Games",
+          "slug": "epic-games",
+          "domain": "epicgames.com",
+          "games_count": 1266,
+          "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg"
+  },
+  {
+    "name": "Counter-Strike: Global Offensive",
+    "released": "2012-08-21",
+    "slug": "counter-strike-global-offensive",
+    "platforms": [
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2012-08-21",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows® 7/Vista/XP<br></li><li><strong>Processor:</strong> Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better<br></li><li><strong>Memory:</strong> 2 GB RAM<br></li><li><strong>Graphics:</strong> Video card must be 256 MB or more and should be a DirectX 9-compatible with support for Pixel Shader 3.0<br></li><li><strong>DirectX:</strong> Version 9.0c<br></li><li><strong>Storage:</strong> 15 GB available space</li></ul>"
+        },
+        "requirements_ru": {
+          "minimum": "Сore 2 Duo/Athlon x2 64 1.8 ГГц,2 Гб памяти,GeForce 8800/Radeon X9800,7.6 Гб на винчестере,интернет-соединение",
+          "recommended": "Core 2 Duo E6600/Phenom X3 8750,4 Гб памяти,GeForce 480 GTX/Radeon HD 6970,7.6 Гб на винчестере,интернет-соединение"
+        }
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2012-08-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2012-08-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 4619,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 11489,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 49169,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/736/73619bd336c894d6941d926bfd563946.jpg"
+  },
+  {
+    "name": "Portal",
+    "released": "2007-10-09",
+    "slug": "portal",
+    "platforms": [
+      {
+        "platform": {
+          "id": 21,
+          "name": "Android",
+          "slug": "android",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 52263,
+          "image_background": "https://media.rawg.io/media/games/fc3/fc30790a3b3c738d7a271b02c1e26dc2.jpg"
+        },
+        "released_at": "2007-10-09",
+        "requirements_en": {
+          "minimum": "4.4 and up"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2007-10-09",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2007-10-09",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 6,
+          "name": "Linux",
+          "slug": "linux",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 75485,
+          "image_background": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+        },
+        "released_at": "2007-10-09",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 5,
+          "name": "macOS",
+          "slug": "macos",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 102027,
+          "image_background": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg"
+        },
+        "released_at": "2007-10-09",
+        "requirements_en": {
+          "minimum": "<strong>Minimum: </strong>OS X version Leopard 10.5.8, Snow Leopard 10.6.3, 1GB RAM, NVIDIA GeForce 8 or higher, ATI X1600 or higher, or Intel HD 3000 or higher Mouse, Keyboard, Internet Connection"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516631,
+          "image_background": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg"
+        },
+        "released_at": "2007-10-09",
+        "requirements_en": {
+          "minimum": "<p><strong>Minimum: </strong>1.7 GHz Processor, 512MB RAM, DirectX&reg; 8.1 level Graphics Card (Requires support for SSE), Windows&reg; 7 (32/64-bit)/Vista/XP, Mouse, Keyboard, Internet Connection</p>\r\n\t\t\t<p><strong>Recommended: </strong>Pentium 4 processor (3.0GHz, or better), 1GB RAM, DirectX&reg; 9 level Graphics Card, Windows&reg; 7 (32/64-bit)/Vista/XP, Mouse, Keyboard, Internet Connection</p>"
+        },
+        "requirements_ru": {
+          "minimum": "Pentium 4/Athlon XP 1.7 ГГц,512 Мб памяти,3D-ускоритель со 128 Мб памяти,7.5 Гб на винчестере,Интернет-соединение 128 Кб/c",
+          "recommended": "Core 2 Duo/Athlon 64 3 ГГц,1 Гб памяти,3D-ускоритель с 512 Мб памяти,12 Гб на винчестере,Интернет-соединение 512 Кб/c"
+        }
+      },
+      {
+        "platform": {
+          "id": 7,
+          "name": "Nintendo Switch",
+          "slug": "nintendo-switch",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5315,
+          "image_background": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+        },
+        "released_at": "2007-10-09",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 14890,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 40973,
+        "store": {
+          "id": 8,
+          "name": "Google Play",
+          "slug": "google-play",
+          "domain": "play.google.com",
+          "games_count": 17056,
+          "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 3,
+      "name": "Teen",
+      "slug": "teen"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg"
+  },
+  {
+    "name": "Left 4 Dead 2",
+    "released": "2009-11-17",
+    "slug": "left-4-dead-2",
+    "platforms": [
+      {
+        "platform": {
+          "id": 5,
+          "name": "macOS",
+          "slug": "macos",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 102027,
+          "image_background": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg"
+        },
+        "released_at": "2009-11-17",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 6,
+          "name": "Linux",
+          "slug": "linux",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 75485,
+          "image_background": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+        },
+        "released_at": "2009-11-17",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516631,
+          "image_background": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg"
+        },
+        "released_at": "2009-11-17",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows® 7 32/64-bit / Vista 32/64 / XP<br></li><li><strong>Processor:</strong> Pentium 4 3.0GHz<br></li><li><strong>Memory:</strong> 2 GB RAM<br></li><li><strong>Graphics:</strong> Video card with 128 MB, Shader model 2.0. ATI X800, NVidia 6600 or better<br></li><li><strong>DirectX:</strong> Version 9.0c<br></li><li><strong>Storage:</strong> 13 GB available space<br></li><li><strong>Sound Card:</strong> DirectX 9.0c compatible sound card</li></ul>",
+          "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows® 7 32/64-bit / Vista 32/64 / XP<br></li><li><strong>Processor:</strong> Intel core 2 duo 2.4GHz<br></li><li><strong>Memory:</strong> 2 GB RAM<br></li><li><strong>Graphics:</strong> Video Card Shader model 3.0. NVidia 7600, ATI X1600 or better<br></li><li><strong>DirectX:</strong> Version 9.0c<br></li><li><strong>Storage:</strong> 13 GB available space<br></li><li><strong>Sound Card:</strong> DirectX 9.0c compatible sound card</li></ul>"
+        },
+        "requirements_ru": {
+          "minimum": "Pentium 4/Athlon 64 3 ГГц,1 Гб памяти,GeForce 6600/Radeon X800,7.5 Гб на винчестере",
+          "recommended": "Core 2 Duo/Athlon 64 X2 2.4 ГГц,2 Гб памяти,GeForce 7600/Radeon X1600,7.5 Гб на винчестере"
+        }
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2009-11-17",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 13208,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 34000,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg"
+  },
+  {
+    "name": "The Elder Scrolls V: Skyrim",
+    "released": "2011-11-11",
+    "slug": "the-elder-scrolls-v-skyrim",
+    "platforms": [
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2011-11-11",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br>\t\t\t\t\t\t\t\t<ul class=\"bb_ul\"><li><strong>OS:</strong> Windows 7/Vista/XP PC (32 or 64 bit)<br>\t\t\t\t\t\t\t\t</li><li><strong>Processor:</strong> Dual Core 2.0GHz or equivalent processor<br>\t\t\t\t\t\t\t\t</li><li><strong>Memory:</strong> 2GB System RAM<br>\t\t\t\t\t\t\t\t</li><li><strong>Hard Disk Space:</strong> 6GB free HDD Space<br>\t\t\t\t\t\t\t\t</li><li><strong>Video Card:</strong> Direct X 9.0c compliant video card with 512 MB of RAM<br>\t\t\t\t\t\t\t\t</li><li><strong>Sound:</strong> DirectX compatible sound card<br>\t\t\t\t\t\t\t\t</li></ul>",
+          "recommended": "<strong>Recommended:</strong><br>\t\t\t\t\t\t\t\t<ul class=\"bb_ul\"><li><strong>Processor:</strong> Quad-core Intel or AMD CPU<br>\t\t\t\t\t\t\t\t</li><li><strong>Memory:</strong> 4GB System RAM<br>\t\t\t\t\t\t\t\t</li><li><strong>Video Card:</strong> DirectX 9.0c compatible NVIDIA or AMD ATI video card with 1GB of RAM (Nvidia GeForce GTX 260 or higher; ATI Radeon 4890 or higher)<br>\t\t\t\t\t\t\t\t</li></ul>"
+        },
+        "requirements_ru": {
+          "minimum": "Core 2 Duo/Athlon X2 2 ГГц,2 Гб памяти,GeForce 8800/Radeon X1900,6 Гб на винчестере",
+          "recommended": "Core 2 Quad/Phenom X4 2.5 ГГц,4 Гб памяти,GeForce GTX 260/Radeon HD 4890,6 Гб на винчестере"
+        }
+      },
+      {
+        "platform": {
+          "id": 7,
+          "name": "Nintendo Switch",
+          "slug": "nintendo-switch",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5315,
+          "image_background": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+        },
+        "released_at": "2011-11-11",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2011-11-11",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2011-11-11",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 6037,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 15144,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 32919,
+        "store": {
+          "id": 6,
+          "name": "Nintendo Store",
+          "slug": "nintendo",
+          "domain": "nintendo.com",
+          "games_count": 8885,
+          "image_background": "https://media.rawg.io/media/screenshots/88b/88b5f27f07d6ca2f8a3cd0b36e03a670.jpg"
+        }
+      },
+      {
+        "id": 49792,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg"
+  },
+  {
+    "name": "BioShock Infinite",
+    "released": "2013-03-26",
+    "slug": "bioshock-infinite",
+    "platforms": [
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2013-03-26",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2013-03-26",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 7,
+          "name": "Nintendo Switch",
+          "slug": "nintendo-switch",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5315,
+          "image_background": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+        },
+        "released_at": "2013-03-26",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 6,
+          "name": "Linux",
+          "slug": "linux",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 75485,
+          "image_background": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+        },
+        "released_at": "2013-03-26",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2013-03-26",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows Vista Service Pack 2 32-bit<br>\t</li><li><strong>Processor:</strong> Intel Core 2 DUO 2.4 GHz / AMD Athlon X2 2.7 GHz<br>\t</li><li><strong>Memory:</strong> 2GB<br>\t</li><li><strong>Hard Disk Space:</strong> 20 GB free<br>\t</li><li><strong>Video Card:</strong> DirectX10 Compatible ATI Radeon HD 3870 / NVIDIA 8800 GT / Intel HD 3000 Integrated Graphics<br>\t</li><li><strong>Video Card Memory:</strong> 512 MB\t<br>\t</li><li><strong>Sound:</strong> DirectX Compatible</li></ul>",
+          "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows 7 Service Pack 1 64-bit<br>\t</li><li><strong>Processor:</strong> Quad Core Processor<br>\t</li><li><strong>Memory:</strong> 4GB<br>\t</li><li><strong>Hard Disk Space:</strong> 30 GB free<br>\t</li><li><strong>Video Card:</strong> DirectX11 Compatible, AMD Radeon HD 6950 / NVIDIA GeForce GTX 560<br>\t</li><li><strong>Video Card Memory:</strong> 1024 MB\t<br>\t</li><li><strong>Sound:</strong> DirectX Compatible</li></ul>"
+        },
+        "requirements_ru": {
+          "minimum": "Win Vista 32\nCore 2 Duo E4600/Athlon 64 X2 5200+\nGeForce GT 340/Radeon HD 3800\n2 GB RAM\n20 GB HDD",
+          "recommended": "Win 7 64\nCore 2 Quad Q6600/Athlon II X4 610e\nGeForce GTX 560/Radeon HD 6950\n4 GB RAM\n20 GB HDD"
+        }
+      },
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2013-03-26",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2013-03-26",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 828870,
+        "store": {
+          "id": 11,
+          "name": "Epic Games",
+          "slug": "epic-games",
+          "domain": "epicgames.com",
+          "games_count": 1266,
+          "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+        }
+      },
+      {
+        "id": 71727,
+        "store": {
+          "id": 4,
+          "name": "App Store",
+          "slug": "apple-appstore",
+          "domain": "apps.apple.com",
+          "games_count": 75329,
+          "image_background": "https://media.rawg.io/media/games/960/960b601d9541cec776c5fa42a00bf6c4.jpg"
+        }
+      },
+      {
+        "id": 440409,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      },
+      {
+        "id": 461035,
+        "store": {
+          "id": 6,
+          "name": "Nintendo Store",
+          "slug": "nintendo",
+          "domain": "nintendo.com",
+          "games_count": 8885,
+          "image_background": "https://media.rawg.io/media/screenshots/88b/88b5f27f07d6ca2f8a3cd0b36e03a670.jpg"
+        }
+      },
+      {
+        "id": 4382,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 13084,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 33810,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+  },
+  {
+    "name": "Red Dead Redemption 2",
+    "released": "2018-10-26",
+    "slug": "red-dead-redemption-2",
+    "platforms": [
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2018-10-26",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 7 - Service Pack 1 (6.1.7601)<br></li><li><strong>Processor:</strong> Intel® Core™ i5-2500K / AMD FX-6300<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB<br></li><li><strong>Network:</strong> Broadband Internet connection<br></li><li><strong>Storage:</strong> 150 GB available space<br></li><li><strong>Sound Card:</strong> Direct X Compatible</li></ul>",
+          "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 10 - April 2018 Update (v1803)<br></li><li><strong>Processor:</strong> Intel® Core™ i7-4770K / AMD Ryzen 5 1500X<br></li><li><strong>Memory:</strong> 12 GB RAM<br></li><li><strong>Graphics:</strong> Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB<br></li><li><strong>Network:</strong> Broadband Internet connection<br></li><li><strong>Storage:</strong> 150 GB available space<br></li><li><strong>Sound Card:</strong> Direct X Compatible</li></ul>"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2018-10-26",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2018-10-26",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 257732,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 374316,
+        "store": {
+          "id": 11,
+          "name": "Epic Games",
+          "slug": "epic-games",
+          "domain": "epicgames.com",
+          "games_count": 1266,
+          "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+        }
+      },
+      {
+        "id": 384218,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 48782,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg"
+  },
+  {
+    "name": "Borderlands 2",
+    "released": "2012-09-18",
+    "slug": "borderlands-2",
+    "platforms": [
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2012-09-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 5,
+          "name": "macOS",
+          "slug": "macos",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 102027,
+          "image_background": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg"
+        },
+        "released_at": "2012-09-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2012-09-18",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows XP SP3<br>\t</li><li><strong>Processor:</strong> 2.4 GHz Dual Core Processor<br>\t</li><li><strong>Memory:</strong> 2 GB(XP)/ 2 GB(Vista)<br>\t</li><li><strong>Hard Disk Space:</strong> 13 GB free<br>\t</li><li><strong>Video Memory:</strong> 256 MB<br>\t</li><li><strong>Video Card:</strong> NVIDIA GeForce 8500 /ATI Radeon HD 2600<br>\t</li><li><strong>Sound:</strong> DirectX 9.0c Compatible<br>\t</li><li><strong>Other Requirements:</strong>Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)</li></ul>",
+          "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows XP SP3/Vista/Win 7<br>\t</li><li><strong>Processor:</strong> 2.3 GHz Quad Core processor<br>\t</li><li><strong>Memory:</strong> 2 GB<br>\t</li><li><strong>Hard Disk Space:</strong> 20 GB free<br>\t</li><li><strong>Video Memory:</strong> 512MB<br>\t</li><li><strong>Video Card:</strong> NVIDIA GeForce GTX 560 / ATI Radeon HD 5850<br>\t</li><li><strong>Sound:</strong> DirectX 9.0c Compatible<br>\t</li><li><strong>Other Requirements:</strong>Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)</li></ul>"
+        },
+        "requirements_ru": {
+          "minimum": "Core 2 Duo/Athlon 64 X2 2.4 ГГц,2 Гб памяти,GeForce 8500/Radeon HD 2600,13 Гб на винчестере,интернет-соединение",
+          "recommended": "Core i5/Phenom X4 2.3 ГГц,2 Гб памяти,GeForce GTX 560/Radeon HD 5850,20 Гб на винчестере,интернет-соединение"
+        }
+      },
+      {
+        "platform": {
+          "id": 21,
+          "name": "Android",
+          "slug": "android",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 52263,
+          "image_background": "https://media.rawg.io/media/games/fc3/fc30790a3b3c738d7a271b02c1e26dc2.jpg"
+        },
+        "released_at": "2012-09-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 6,
+          "name": "Linux",
+          "slug": "linux",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 75485,
+          "image_background": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+        },
+        "released_at": "2012-09-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 19,
+          "name": "PS Vita",
+          "slug": "ps-vita",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 1449,
+          "image_background": "https://media.rawg.io/media/games/13a/13a528ac9cf48bbb6be5d35fe029336d.jpg"
+        },
+        "released_at": "2012-09-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2012-09-18",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 4000,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 213037,
+        "store": {
+          "id": 8,
+          "name": "Google Play",
+          "slug": "google-play",
+          "domain": "play.google.com",
+          "games_count": 17056,
+          "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
+        }
+      },
+      {
+        "id": 11088,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 34042,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      },
+      {
+        "id": 71617,
+        "store": {
+          "id": 4,
+          "name": "App Store",
+          "slug": "apple-appstore",
+          "domain": "apps.apple.com",
+          "games_count": 75329,
+          "image_background": "https://media.rawg.io/media/games/960/960b601d9541cec776c5fa42a00bf6c4.jpg"
+        }
+      },
+      {
+        "id": 817,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+  },
+  {
+    "name": "Life is Strange",
+    "released": "2015-01-29",
+    "slug": "life-is-strange-episode-1-2",
+    "platforms": [
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2015-01-29",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 6,
+          "name": "Linux",
+          "slug": "linux",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 75485,
+          "image_background": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+        },
+        "released_at": "2015-01-29",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2015-01-29",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 5,
+          "name": "macOS",
+          "slug": "macos",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 102027,
+          "image_background": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg"
+        },
+        "released_at": "2015-01-29",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 3,
+          "name": "iOS",
+          "slug": "ios",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 77103,
+          "image_background": "https://media.rawg.io/media/games/c89/c89ca70716080733d03724277df2c6c7.jpg"
+        },
+        "released_at": "2015-01-29",
+        "requirements_en": {
+          "minimum": "iPhone 5s, iPad Air, iPad Air Cellular, iPad Mini Retina, iPad Mini Retina Cellular, iPhone 6, iPhone 6 Plus, iPad Air 2, iPad Air 2 Cellular, iPad Mini 3, iPad Mini 3 Cellular, iPod Touch Sixth Gen, iPhone 6s, iPhone 6s Plus, iPad Mini 4, iPad Mini 4 Cellular, iPad Pro, iPad Pro Cellular, iPad Pro 9.7, iPad Pro 9.7 Cellular, iPhone SE, iPhone 7, iPhone 7 Plus, iPad 6 1 1, iPad 6 1 2, iPad 7 1, iPad 7 2, iPad 7 3, iPad 7 4, iPhone 8, iPhone 8 Plus, iPhone X, iPad 7 5, iPad 7 6, iPhone X S, iPhone X S Max, iPhone X R, iPad 8 1 2, iPad 8 3 4, iPad 8 5 6, iPad 8 7 8, iPad Mini 5, iPad Mini 5 Cellular, iPad Air 3, iPad Air 3 Cellular, iPod Touch Seventh Gen"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2015-01-29",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 21,
+          "name": "Android",
+          "slug": "android",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 52263,
+          "image_background": "https://media.rawg.io/media/games/fc3/fc30790a3b3c738d7a271b02c1e26dc2.jpg"
+        },
+        "released_at": "2015-01-29",
+        "requirements_en": {
+          "minimum": "6.0 and up"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2015-01-29",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2015-01-29",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 451321,
+        "store": {
+          "id": 5,
+          "name": "GOG",
+          "slug": "gog",
+          "domain": "gog.com",
+          "games_count": 5484,
+          "image_background": "https://media.rawg.io/media/games/713/713269608dc8f2f40f5a670a14b2de94.jpg"
+        }
+      },
+      {
+        "id": 3702,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 35603,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 35602,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      },
+      {
+        "id": 217695,
+        "store": {
+          "id": 8,
+          "name": "Google Play",
+          "slug": "google-play",
+          "domain": "play.google.com",
+          "games_count": 17056,
+          "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
+        }
+      },
+      {
+        "id": 245823,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      },
+      {
+        "id": 44714,
+        "store": {
+          "id": 4,
+          "name": "App Store",
+          "slug": "apple-appstore",
+          "domain": "apps.apple.com",
+          "games_count": 75329,
+          "image_background": "https://media.rawg.io/media/games/960/960b601d9541cec776c5fa42a00bf6c4.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
+  },
+  {
+    "name": "Half-Life 2",
+    "released": "2004-11-16",
+    "slug": "half-life-2",
+    "platforms": [
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516631,
+          "image_background": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg"
+        },
+        "released_at": "2004-11-16",
+        "requirements_en": {
+          "minimum": "Minimum:\r\n\r\nOS: Windows 7, Vista, XP\r\n\r\nProcessor: 1.7 Ghz\r\n\r\nMemory: 512 MB RAM\r\n\r\nGraphics: DirectX 8.1 level Graphics Card (requires support for SSE)\r\n\r\nStorage: 6500 MB available space"
+        },
+        "requirements_ru": {
+          "minimum": "Pentium III/Athlon 1.2 ГГц,256 Мб памяти,3D-ускоритель с 64 Мб памяти,5 Гб на винчестере,доступ в Интернет",
+          "recommended": "Pentium 4/Athlon XP 2.5 ГГц,512 Мб памяти,3D-ускоритель со 128 Мб памяти,5 Гб на винчестере,доступ в Интернет"
+        }
+      },
+      {
+        "platform": {
+          "id": 5,
+          "name": "macOS",
+          "slug": "macos",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 102027,
+          "image_background": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg"
+        },
+        "released_at": "2004-11-16",
+        "requirements_en": {
+          "minimum": "Minimum:\r\n\r\nOS: Leopard 10.5.8, Snow Leopard 10.6.3, or higher\r\n\r\nMemory: 1 GB RAM\r\n\r\nGraphics: Nvidia GeForce8 or higher, ATI X1600 or higher, Intel HD 3000 or higher"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2004-11-16",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 6,
+          "name": "Linux",
+          "slug": "linux",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 75485,
+          "image_background": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+        },
+        "released_at": "2004-11-16",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 80,
+          "name": "Xbox",
+          "slug": "xbox-old",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 725,
+          "image_background": "https://media.rawg.io/media/games/2ee/2eef5ed5e82c28d1299ecc2a0e60f2cb.jpg"
+        },
+        "released_at": "2004-11-16",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 21,
+          "name": "Android",
+          "slug": "android",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 52263,
+          "image_background": "https://media.rawg.io/media/games/fc3/fc30790a3b3c738d7a271b02c1e26dc2.jpg"
+        },
+        "released_at": "2004-11-16",
+        "requirements_en": {
+          "minimum": "4.4 and up"
+        },
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 14891,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 41441,
+        "store": {
+          "id": 8,
+          "name": "Google Play",
+          "slug": "google-play",
+          "domain": "play.google.com",
+          "games_count": 17056,
+          "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg"
+  },
+  {
+    "name": "BioShock",
+    "released": "2007-08-21",
+    "slug": "bioshock",
+    "platforms": [
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2007-08-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 5,
+          "name": "macOS",
+          "slug": "macos",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 102027,
+          "image_background": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg"
+        },
+        "released_at": "2007-08-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2007-08-21",
+        "requirements_en": {
+          "minimum": "<h2 class=\"bb_tag\"><strong>Minimum: </strong></h2><ul class=\"bb_ul\"><li><strong>Operating System</strong>: Windows XP (with Service Pack 2) or Windows Vista<br></li><li><strong>CPU</strong>: Intel single-core Pentium 4 processor at 2.4GHz<br></li><li><strong>RAM</strong>: 1 GB<br></li><li><strong>Video Card</strong>: Direct X 9.0c compliant video card with 128MB RAM and Pixel Shader 3.0 (NVIDIA 6600 or better/ATI X1300 or better, excluding ATI X1550)<br></li><li><strong>Sound Card</strong>: 100% direct X 9.0c compatible sound card<br></li><li><strong>Hard Drive Space</strong>: 8GB<br></li><li>Game requires Internet connection for activation</li></ul>",
+          "recommended": "<h2 class=\"bb_tag\"><strong>Recommended: </strong></h2><ul class=\"bb_ul\"><li><strong>CPU</strong>: Intel Core 2 Duo processor<br></li><li><strong>RAM</strong>: 2GB<br></li><li><strong>Video Card</strong>: DX 9 - Direct X 9.0c compliant video card with 512 MB RAM and Pixel Shader 3.0 (NVIDIA GeForce 7900 GT or better), DX 10 - NVIDIA GeForce 8600 or better<br></li><li><strong>Sound Card</strong>: SoundBlaster(r) X-Fi(tm) series (optimized foruse with Creative Labs EAX ADVANCED HD 4.0 or EAX ADVANCED HD 5.0 compatible sound cards)</li></ul>"
+        },
+        "requirements_ru": {
+          "minimum": "Pentium 4/Athlon 64 2.5 ГГц,1 Гб памяти,3D-ускоритель со 128 Мб памяти и SM 3.0, 7.5 Гб на винчестере, Windows XP SP2 или Vista,Интернет-соединение",
+          "recommended": "Core 2 Duo/Athlon 64 X2 3 ГГц,2 Гб памяти,3D-ускоритель с 512 Мб памяти и SM 3.0, 7.5 Гб на винчестере, Windows Vista,Интернет-соединение"
+        }
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2007-08-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 4614,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 79531,
+        "store": {
+          "id": 4,
+          "name": "App Store",
+          "slug": "apple-appstore",
+          "domain": "apps.apple.com",
+          "games_count": 75329,
+          "image_background": "https://media.rawg.io/media/games/960/960b601d9541cec776c5fa42a00bf6c4.jpg"
+        }
+      },
+      {
+        "id": 440407,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      },
+      {
+        "id": 20580,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 33844,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg"
+  },
+  {
+    "name": "Destiny 2",
+    "released": "2017-09-06",
+    "slug": "destiny-2",
+    "platforms": [
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2017-09-06",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2017-09-06",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2017-09-06",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 171,
+          "name": "Web",
+          "slug": "web",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 260091,
+          "image_background": "https://media.rawg.io/media/screenshots/c20/c201f665fc1d461719833ec1320935d6.jpg"
+        },
+        "released_at": "2017-09-06",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 186,
+          "name": "Xbox Series S/X",
+          "slug": "xbox-series-x",
+          "image": null,
+          "year_end": null,
+          "year_start": 2020,
+          "games_count": 803,
+          "image_background": "https://media.rawg.io/media/games/b34/b3419c2706f8f8dbe40d08e23642ad06.jpg"
+        },
+        "released_at": "2017-09-06",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 187,
+          "name": "PlayStation 5",
+          "slug": "playstation5",
+          "image": null,
+          "year_end": null,
+          "year_start": 2020,
+          "games_count": 934,
+          "image_background": "https://media.rawg.io/media/games/3ea/3ea3c9bbd940b6cb7f2139e42d3d443f.jpg"
+        },
+        "released_at": "2017-09-06",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 837910,
+        "store": {
+          "id": 11,
+          "name": "Epic Games",
+          "slug": "epic-games",
+          "domain": "epicgames.com",
+          "games_count": 1266,
+          "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+        }
+      },
+      {
+        "id": 32,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 808,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      },
+      {
+        "id": 326831,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 3,
+      "name": "Teen",
+      "slug": "teen"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+  },
+  {
+    "name": "Limbo",
+    "released": "2010-07-21",
+    "slug": "limbo",
+    "platforms": [
+      {
+        "platform": {
+          "id": 6,
+          "name": "Linux",
+          "slug": "linux",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 75485,
+          "image_background": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": {
+          "minimum": "<ul class=\"bb_ul\"><li><strong>OS:</strong> SteamOS, Ubuntu 12.04 or later, or otherwise compatible Linux distribution.<br>\t\t\t\t\t\t</li><li><strong>Processor:</strong> 2GHz<br>\t\t\t\t\t\t</li><li><strong>Memory:</strong> 1 GB RAM <br>\t\t\t\t\t\t</li><li><strong>Hard Disk Space:</strong> 150MB\t<br>\t\t\t\t\t\t</li><li><strong>Video Card:</strong> OpenGL 2.0 compatible video card with 256 MB shared or dedicated RAM <br>\t\t\t\t\t</li></ul>"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 19,
+          "name": "PS Vita",
+          "slug": "ps-vita",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 1449,
+          "image_background": "https://media.rawg.io/media/games/13a/13a528ac9cf48bbb6be5d35fe029336d.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 21,
+          "name": "Android",
+          "slug": "android",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 52263,
+          "image_background": "https://media.rawg.io/media/games/fc3/fc30790a3b3c738d7a271b02c1e26dc2.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": {
+          "minimum": "4.4 and up"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 7,
+          "name": "Nintendo Switch",
+          "slug": "nintendo-switch",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5315,
+          "image_background": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 3,
+          "name": "iOS",
+          "slug": "ios",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 77103,
+          "image_background": "https://media.rawg.io/media/games/c89/c89ca70716080733d03724277df2c6c7.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": {
+          "minimum": "iPad 2 Wifi, iPad 2 3G, iPhone 4S, iPad Third Gen, iPad Third Gen 4G, iPhone 5, iPod Touch Fifth Gen, iPad Fourth Gen, iPad Fourth Gen 4G, iPad Mini, iPad Mini 4G, iPhone 5c, iPhone 5s, iPad Air, iPad Air Cellular, iPad Mini Retina, iPad Mini Retina Cellular, iPhone 6, iPhone 6 Plus, iPad Air 2, iPad Air 2 Cellular, iPad Mini 3, iPad Mini 3 Cellular, iPod Touch Sixth Gen, iPhone 6s, iPhone 6s Plus, iPad Mini 4, iPad Mini 4 Cellular, iPad Pro, iPad Pro Cellular, iPad Pro 9.7, iPad Pro 9.7 Cellular, iPhone SE, iPhone 7, iPhone 7 Plus, iPad 6 1 1, iPad 6 1 2, iPad 7 1, iPad 7 2, iPad 7 3, iPad 7 4, iPhone 8, iPhone 8 Plus, iPhone X, iPad 7 5, iPad 7 6, iPhone X S, iPhone X S Max, iPhone X R, iPad 8 1 2, iPad 8 3 4, iPad 8 5 6, iPad 8 7 8, iPad Mini 5, iPad Mini 5 Cellular, iPad Air 3, iPad Air 3 Cellular, iPod Touch Seventh Gen"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": {
+          "minimum": "<ul class=\"bb_ul\"><li><strong>OS:</strong> Windows XP, Vista, 7<br>\t\t\t\t\t\t</li><li><strong>Processor:</strong> 2 GHz<br>\t\t\t\t\t\t</li><li><strong>Memory:</strong> 512MB<br>\t\t\t\t\t\t</li><li><strong>Hard Disk Space:</strong> 150MB\t<br>\t\t\t\t\t\t</li><li><strong>Video Card:</strong> 5 years or younger. Integrated graphics and very low budget cards may not work. Shader Model 3.0 required<br>\t\t\t\t\t\t</li><li><strong>DirectX®:</strong> 9.0c\t<br>\t\t\t\t\t\t</li></ul>"
+        },
+        "requirements_ru": {
+          "minimum": "Pentium 4/Athlon XP 2 ГГц,512 Мб памяти,3D-ускоритель с 256 Мб памяти,150 Мб на винчестере",
+          "recommended": "Core 2 Duo/Atlon X2 2 ГГц,1 Гб памяти,3D-ускоритель с 512 Мб памяти,150 Мб на винчестере"
+        }
+      },
+      {
+        "platform": {
+          "id": 5,
+          "name": "macOS",
+          "slug": "macos",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 102027,
+          "image_background": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": {
+          "minimum": "Please be advised that LIMBO only runs Macs produced in 2009 and onwards.<br><ul class=\"bb_ul\"><li><strong>OS:</strong> OS X version Snow Leopard 10.6.3 or later.<br>\t\t\t\t\t\t</li><li><strong>Processor:</strong> Intel Mac<br>\t\t\t\t\t\t</li><li><strong>Memory:</strong> 1 GB RAM <br>\t\t\t\t\t\t</li><li><strong>Hard Disk Space:</strong> 150MB\t<br>\t\t\t\t\t\t</li><li><strong>Video Card:</strong> OpenGL 2.0 compatible video card with 256 MB shared or dedicated RAM (ATI or NVIDIA) <br>\t\t\t\t\t</li></ul>"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 14,
+          "name": "Xbox 360",
+          "slug": "xbox360",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 2787,
+          "image_background": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 16,
+          "name": "PlayStation 3",
+          "slug": "playstation3",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 3163,
+          "image_background": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2010-07-21",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 1054,
+        "store": {
+          "id": 4,
+          "name": "App Store",
+          "slug": "apple-appstore",
+          "domain": "apps.apple.com",
+          "games_count": 75329,
+          "image_background": "https://media.rawg.io/media/games/960/960b601d9541cec776c5fa42a00bf6c4.jpg"
+        }
+      },
+      {
+        "id": 3679,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 7493,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      },
+      {
+        "id": 10311,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 26852,
+        "store": {
+          "id": 5,
+          "name": "GOG",
+          "slug": "gog",
+          "domain": "gog.com",
+          "games_count": 5484,
+          "image_background": "https://media.rawg.io/media/games/713/713269608dc8f2f40f5a670a14b2de94.jpg"
+        }
+      },
+      {
+        "id": 33137,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      },
+      {
+        "id": 49142,
+        "store": {
+          "id": 6,
+          "name": "Nintendo Store",
+          "slug": "nintendo",
+          "domain": "nintendo.com",
+          "games_count": 8885,
+          "image_background": "https://media.rawg.io/media/screenshots/88b/88b5f27f07d6ca2f8a3cd0b36e03a670.jpg"
+        }
+      },
+      {
+        "id": 40035,
+        "store": {
+          "id": 8,
+          "name": "Google Play",
+          "slug": "google-play",
+          "domain": "play.google.com",
+          "games_count": 17056,
+          "image_background": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg"
+        }
+      },
+      {
+        "id": 335541,
+        "store": {
+          "id": 11,
+          "name": "Epic Games",
+          "slug": "epic-games",
+          "domain": "epicgames.com",
+          "games_count": 1266,
+          "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 3,
+      "name": "Teen",
+      "slug": "teen"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/942/9424d6bb763dc38d9378b488603c87fa.jpg"
+  },
+  {
+    "name": "God of War (2018)",
+    "released": "2018-04-20",
+    "slug": "god-of-war-2",
+    "platforms": [
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516631,
+          "image_background": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg"
+        },
+        "released_at": "2018-04-20",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 10 64-bit<br></li><li><strong>Processor:</strong> Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GTX 960 (4 GB) or AMD R9 290X (4 GB)<br></li><li><strong>DirectX:</strong> Version 11<br></li><li><strong>Storage:</strong> 70 GB available space<br></li><li><strong>Additional Notes:</strong> DirectX feature level 11_1 required</li></ul>",
+          "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li>Requires a 64-bit processor and operating system<br></li><li><strong>OS:</strong> Windows 10 64-bit<br></li><li><strong>Processor:</strong> Intel i5-6600k (4 core 3.5 GHz) or AMD Ryzen 5 2400 G (4 core 3.6 GHz)<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GTX 1060 (6 GB) or AMD RX 570 (4 GB)<br></li><li><strong>DirectX:</strong> Version 11<br></li><li><strong>Storage:</strong> 70 GB available space<br></li><li><strong>Additional Notes:</strong> DirectX feature level 11_1 required</li></ul>"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2018-04-20",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 46917,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 677451,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 677452,
+        "store": {
+          "id": 11,
+          "name": "Epic Games",
+          "slug": "epic-games",
+          "domain": "epicgames.com",
+          "games_count": 1266,
+          "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg"
+  },
+  {
+    "name": "Fallout 4",
+    "released": "2015-11-09",
+    "slug": "fallout-4",
+    "platforms": [
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2015-11-09",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2015-11-09",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows 7/8/10 (64-bit OS required)<br></li><li><strong>Processor:</strong> Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GTX 550 Ti 2GB/AMD Radeon HD 7870 2GB or equivalent<br></li><li><strong>Storage:</strong> 30 GB available space</li></ul>",
+          "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows 7/8/10 (64-bit OS required)<br></li><li><strong>Processor:</strong> Intel Core i7 4790 3.6 GHz/AMD FX-9590 4.7 GHz or equivalent<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> NVIDIA GTX 780 3GB/AMD Radeon R9 290X 4GB or equivalent<br></li><li><strong>Storage:</strong> 30 GB available space</li></ul>"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2015-11-09",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 3252,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 9047,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      },
+      {
+        "id": 13248,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg"
+  },
+  {
+    "name": "DOOM (2016)",
+    "released": "2016-05-13",
+    "slug": "doom",
+    "platforms": [
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2016-05-13",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2016-05-13",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows7,Windows8,Windows10<br></li><li><strong>Processor:</strong> Intel cpu i3<br></li><li><strong>Memory:</strong> 4 GB RAM<br></li><li><strong>Graphics:</strong> GTX 650<br></li><li><strong>Storage:</strong> 2 GB available space<br></li><li><strong>Sound Card:</strong> Realtek</li></ul>",
+          "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong> Windows7,Windows8,Windows10<br></li><li><strong>Processor:</strong> Intel cpu i5<br></li><li><strong>Memory:</strong> 8 GB RAM<br></li><li><strong>Graphics:</strong> GTX 770<br></li><li><strong>Storage:</strong> 4 GB available space<br></li><li><strong>Sound Card:</strong> Realtek</li></ul>"
+        },
+        "requirements_ru": {
+          "minimum": "i386-33, 4 Мб",
+          "recommended": "i486-40, 8 Мб"
+        }
+      },
+      {
+        "platform": {
+          "id": 7,
+          "name": "Nintendo Switch",
+          "slug": "nintendo-switch",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5315,
+          "image_background": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg"
+        },
+        "released_at": "2016-05-13",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 18,
+          "name": "PlayStation 4",
+          "slug": "playstation4",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 6708,
+          "image_background": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg"
+        },
+        "released_at": "2016-05-13",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 355582,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 2571,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 38659,
+        "store": {
+          "id": 6,
+          "name": "Nintendo Store",
+          "slug": "nintendo",
+          "domain": "nintendo.com",
+          "games_count": 8885,
+          "image_background": "https://media.rawg.io/media/screenshots/88b/88b5f27f07d6ca2f8a3cd0b36e03a670.jpg"
+        }
+      },
+      {
+        "id": 8223,
+        "store": {
+          "id": 2,
+          "name": "Xbox Store",
+          "slug": "xbox-store",
+          "domain": "microsoft.com",
+          "games_count": 4770,
+          "image_background": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 4,
+      "name": "Mature",
+      "slug": "mature"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/c4b/c4b0cab189e73432de3a250d8cf1c84e.jpg"
+  },
+  {
+    "name": "PAYDAY 2",
+    "released": "2013-08-13",
+    "slug": "payday-2",
+    "platforms": [
+      {
+        "platform": {
+          "id": 6,
+          "name": "Linux",
+          "slug": "linux",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 75485,
+          "image_background": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+        },
+        "released_at": "2013-08-13",
+        "requirements_en": null,
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 4,
+          "name": "PC",
+          "slug": "pc",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 516632,
+          "image_background": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg"
+        },
+        "released_at": "2013-08-13",
+        "requirements_en": {
+          "minimum": "<strong>Minimum:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong>Windows 7<br>\t</li><li><strong>Processor:</strong>2 GHz Intel Dual Core Processor<br>\t</li><li><strong>Memory:</strong>4 GB RAM<br>\t</li><li><strong>Graphics:</strong>Nvidia &amp; AMD (512MB VRAM)<br>\t</li><li><strong>DirectX®:</strong>9.0c<br>\t</li><li><strong>Hard Drive:</strong>31 GB HD space <br>\t</li><li><strong>Sound:</strong>DirectX 9.0c compatible</li></ul>",
+          "recommended": "<strong>Recommended:</strong><br><ul class=\"bb_ul\"><li><strong>OS:</strong>Windows 10<br>\t</li><li><strong>Processor:</strong>2.3 GHz Intel Quad Core Processor<br>\t</li><li><strong>Memory:</strong>8 GB RAM<br>\t</li><li><strong>Graphics:</strong>Nvidia &amp; AMD (1GB VRAM)<br>\t</li><li><strong>DirectX®:</strong>9.0c<br>\t</li><li><strong>Hard Drive:</strong>45 GB HD space<br>\t</li><li><strong>Sound:</strong>DirectX 9.0c compatible</li></ul>"
+        },
+        "requirements_ru": null
+      },
+      {
+        "platform": {
+          "id": 1,
+          "name": "Xbox One",
+          "slug": "xbox-one",
+          "image": null,
+          "year_end": null,
+          "year_start": null,
+          "games_count": 5544,
+          "image_background": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg"
+        },
+        "released_at": "2013-08-13",
+        "requirements_en": null,
+        "requirements_ru": null
+      }
+    ],
+    "stores": [
+      {
+        "id": 961005,
+        "store": {
+          "id": 11,
+          "name": "Epic Games",
+          "slug": "epic-games",
+          "domain": "epicgames.com",
+          "games_count": 1266,
+          "image_background": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+        }
+      },
+      {
+        "id": 4258,
+        "store": {
+          "id": 3,
+          "name": "PlayStation Store",
+          "slug": "playstation-store",
+          "domain": "store.playstation.com",
+          "games_count": 7839,
+          "image_background": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg"
+        }
+      },
+      {
+        "id": 10780,
+        "store": {
+          "id": 1,
+          "name": "Steam",
+          "slug": "steam",
+          "domain": "store.steampowered.com",
+          "games_count": 79476,
+          "image_background": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg"
+        }
+      },
+      {
+        "id": 27939,
+        "store": {
+          "id": 6,
+          "name": "Nintendo Store",
+          "slug": "nintendo",
+          "domain": "nintendo.com",
+          "games_count": 8885,
+          "image_background": "https://media.rawg.io/media/screenshots/88b/88b5f27f07d6ca2f8a3cd0b36e03a670.jpg"
+        }
+      },
+      {
+        "id": 34027,
+        "store": {
+          "id": 7,
+          "name": "Xbox 360 Store",
+          "slug": "xbox360",
+          "domain": "marketplace.xbox.com",
+          "games_count": 1912,
+          "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg"
+        }
+      }
+    ],
+    "esrbRating": {
+      "id": 5,
+      "name": "Adults Only",
+      "slug": "adults-only"
+    },
+    "backgroundImage": "https://media.rawg.io/media/games/73e/73eecb8909e0c39fb246f457b5d6cbbe.jpg"
+  }
+]

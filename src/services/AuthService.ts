@@ -42,7 +42,8 @@ export class AuthService {
   }
 
   verifyToken(token: any) {
-    const decodedToken = jwt.verify(token, 'segredo-do-jwt') as any;
+    const jwtSecret = String(process.env.JWT_SECRET);
+    const decodedToken = jwt.verify(token, jwtSecret) as any;
     const user = this.repository.findByEmail(decodedToken.email);
 
     return user;

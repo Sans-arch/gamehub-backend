@@ -14,7 +14,7 @@ export const server = fastify({
 
 const corsOptions = {
   credentials: true,
-  origin: process.env.APP_CORS_ALLOWED_ORIGINS,
+  origin: String(process.env.APP_CORS_ALLOWED_ORIGINS),
 };
 
 server.register(cors, corsOptions);
@@ -23,10 +23,11 @@ server.register(formBody);
 server.register(authRoute);
 server.register(gamesRoute);
 
-server.listen({
-  port: Number(process.env.APP_PORT) || 5765,
-},
-  (err) => {
+server.listen(
+  {
+    port: Number(process.env.APP_PORT) || 5765,
+  },
+  err => {
     if (err) throw err;
   },
 );
