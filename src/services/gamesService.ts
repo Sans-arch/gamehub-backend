@@ -3,6 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { Game } from '../models/gameModel';
+import { getOAuthTokenFromTwitch } from './twitchService';
+import { getMostPopularGamesOfLastDecade } from './igdbService';
 
 export async function getAllGamesFromExternalAPI() {
   try {
@@ -29,4 +31,10 @@ export async function getAllGamesFromMock() {
 
   const data = fs.readFileSync(mockFilePath, 'utf-8');
   return JSON.parse(data);
+}
+
+export async function getMostPopularFromLastDecadeFromIGDB() {
+  const accessToken = await getOAuthTokenFromTwitch();
+
+  return getMostPopularGamesOfLastDecade(accessToken);
 }

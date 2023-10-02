@@ -13,8 +13,7 @@ export class AuthService {
   register(name: string, email: string, password: string) {
     const userExists = this.repository.findByEmail(email);
 
-    if (userExists)
-      throw new Error('This email was already used by another user.');
+    if (userExists) throw new Error('This email was already used by another user.');
 
     const newUser = new User({ name, email, password });
     newUser.password = bcrypt.hashSync(newUser.password, 10);
@@ -32,11 +31,7 @@ export class AuthService {
     const isSamePassword = bcrypt.compareSync(password, user.password);
     if (!isSamePassword) throw new Error('Wrong password.');
 
-    const token = jwt.sign(
-      { id: user.id, email: user.email },
-      String(process.env.JWT_SECRET),
-      { expiresIn: '1d' },
-    );
+    const token = jwt.sign({ id: user.id, email: user.email }, String(process.env.JWT_SECRET), { expiresIn: '1d' });
 
     return { token, user };
   }

@@ -1,5 +1,5 @@
 import { UserDTO } from '../dtos/UserDTO';
-import { AuthService } from '../services/AuthService';
+import { AuthService } from '../services/authService';
 
 export class AuthController {
   service: AuthService;
@@ -22,6 +22,7 @@ export class AuthController {
 
     try {
       const user = this.service.register(name, email, password);
+
       return {
         code: 201,
         body: user,
