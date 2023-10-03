@@ -8,8 +8,9 @@
     "strict": true /* Enable all strict type-checking options. */,
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "typeRoots": ["./node_modules/@types", "./@types/"]
   },
-  "include": ["src/**/*.ts", "src/mocks"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
