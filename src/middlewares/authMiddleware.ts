@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply, DoneFuncWithErrOrRes } from 'fastify';
-import { AuthService } from '../services/AuthService';
+import { AuthService } from '../services/authService';
 import { UserRepository } from '../repositories/UserRepository';
 
 const userRepository = new UserRepository();
