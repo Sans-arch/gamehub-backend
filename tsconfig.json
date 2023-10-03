@@ -10,6 +10,6 @@
     "esModuleInterop": true,
     "typeRoots": ["./node_modules/@types", "./@types/"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/mocks"],
   "exclude": ["node_modules"]
 }
