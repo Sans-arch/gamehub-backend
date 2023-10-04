@@ -9,11 +9,8 @@ COPY package*.json ./
 # Instale as dependências
 RUN npm install
 
-# Copie o restante dos arquivos da aplicação para o container
-COPY . ./build/
-
-# Copie os arquivos JSON da pasta mocks para dentro do contêiner
-COPY ./src/mocks/*.json .
+# Copie o restante dos arquivos da aplicação para o contêiner
+COPY . .
 
 # Exponha a porta em que a aplicação irá rodar
 EXPOSE 3003
