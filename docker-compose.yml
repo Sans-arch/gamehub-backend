@@ -12,15 +12,21 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   app:
+    container_name: gamehub-backend-app
+    restart: always
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     env_file:
       - .env
     ports:
       - '3003:3003'
     depends_on:
       - postgres
+    volumes:
+      - ./:/app
+      - ignore:/app/node_modules/
 
 volumes:
   postgres_data:
+  ignore:
