@@ -1,9 +1,9 @@
 import { FastifyRequest, FastifyReply, DoneFuncWithErrOrRes } from 'fastify';
-import { AuthService } from '../services/authService';
+import { UserService } from '../services/UserService';
 import { UserRepository } from '../repositories/UserRepository';
 
 const userRepository = new UserRepository();
-const authService = new AuthService(userRepository);
+const userService = new UserService(userRepository);
 
 export const authMiddleware = {
   preHandler: (request: FastifyRequest, reply: FastifyReply, done: DoneFuncWithErrOrRes) => {
@@ -13,7 +13,7 @@ export const authMiddleware = {
       reply.code(401).send({ message: 'Unauthorized: token missing.' });
     }
 
-    const user = authService.verifyToken(token);
+    const user = userService.verifyToken(token);
 
     if (!user) {
       reply.code(404).send({ message: 'Unauthorized: invalid token.' });

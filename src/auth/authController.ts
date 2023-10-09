@@ -1,15 +1,17 @@
+import { FastifyRequest } from 'fastify/types/request';
 import { UserDTO } from '../dtos/UserDTO';
-import { AuthService } from '../services/authService';
+import { UserService } from '../services/UserService';
+import { CreateUserRequest } from './types';
 
 export class AuthController {
-  service: AuthService;
+  userService: UserService;
 
-  constructor(service: AuthService) {
-    this.service = service;
+  constructor(userService: UserService) {
+    this.userService = userService;
   }
 
-  register(request: any) {
-    const { name, email, password } = request.body;
+  async register(request: FastifyRequest) {
+    const { name, email, password } = request.body as CreateUserRequest;
 
     if (!name || !email || !password) {
       return {
@@ -21,7 +23,7 @@ export class AuthController {
     }
 
     try {
-      const user = this.service.register(name, email, password);
+      const user = await this.userService.register(name, email, password);
 
       return {
         code: 201,
@@ -37,7 +39,7 @@ export class AuthController {
     }
   }
 
-  login(request: any) {
+  async login(request: any) {
     const { email, password } = request.body;
 
     if (!email || !password) {
@@ -50,11 +52,19 @@ export class AuthController {
     }
 
     try {
-      const body = this.service.login(email, password);
+      const userWithToken = await this.userService.login(email, password);
 
       return {
         code: 200,
-        body: new UserDTO(body),
+        body: new UserDTO({
+          token: userWithToken.token,
+          user: {
+            id: userWithToken.user.id,
+            email: userWithToken.user.email,
+            name: userWithToken.user.name,
+            password: userWithToken.user.password,
+          },
+        }),
       };
     } catch (error: any) {
       return {

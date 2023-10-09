@@ -1,7 +1,5 @@
-import { v4 as uuidv4 } from 'uuid';
-
 interface IUserConstructor {
-  id?: string;
+  id?: number;
   name: string;
   email: string;
   password: string;
@@ -9,18 +7,20 @@ interface IUserConstructor {
 }
 
 export class User {
-  id: string;
+  id?: number;
   name: string;
   email: string;
   password: string;
-  createdAt: Date;
+  createdAt?: Date;
 
   constructor({ id, name, email, password, createdAt }: IUserConstructor) {
-    this.id = id ?? uuidv4();
+    if (id) {
+      this.id = id;
+    }
+
     this.name = name;
     this.email = email;
     this.password = password;
     this.createdAt = createdAt ?? new Date();
   }
 }
-
