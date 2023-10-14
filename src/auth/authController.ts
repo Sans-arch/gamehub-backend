@@ -1,7 +1,11 @@
 import { FastifyRequest } from 'fastify/types/request';
-import { UserDTO } from '../dtos/UserDTO';
 import { UserService } from '../services/UserService';
-import { CreateUserRequest } from './types';
+import { CreateUserRequest, LoginUserRequest, RetrieveUserRequest } from './types';
+
+interface ResponsePattern {
+  code: number;
+  body: any;
+}
 
 export class AuthController {
   userService: UserService;
@@ -10,7 +14,7 @@ export class AuthController {
     this.userService = userService;
   }
 
-  async register(request: FastifyRequest) {
+  async register(request: FastifyRequest): Promise<ResponsePattern> {
     const { name, email, password } = request.body as CreateUserRequest;
 
     if (!name || !email || !password) {
@@ -39,8 +43,8 @@ export class AuthController {
     }
   }
 
-  async login(request: any) {
-    const { email, password } = request.body;
+  async login(request: FastifyRequest): Promise<ResponsePattern> {
+    const { email, password } = request.body as LoginUserRequest;
 
     if (!email || !password) {
       return {
@@ -52,27 +56,30 @@ export class AuthController {
     }
 
     try {
-      const userWithToken = await this.userService.login(email, password);
+      const userDTO = await this.userService.login(email, password);
 
       return {
         code: 200,
-        body: new UserDTO({
-          token: userWithToken.token,
-          user: {
-            id: userWithToken.user.id,
-            email: userWithToken.user.email,
-            name: userWithToken.user.name,
-            password: userWithToken.user.password,
-          },
-        }),
+        body: userDTO,
       };
     } catch (error: any) {
       return {
-        code: 200,
+        code: 400,
         body: {
           message: error.message,
         },
       };
     }
+  }
+
+  async retrieveUserByToken(request: FastifyRequest): Promise<ResponsePattern> {
+    const { token } = request.body as RetrieveUserRequest;
+
+    const userDTO = await this.userService.retrieveUserByToken(token);
+
+    return {
+      code: 200,
+      body: userDTO,
+    };
   }
 }

@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const imdbPath = 'https://api.igdb.com/v4/games';
+const igdbPath = 'https://api.igdb.com/v4/games';
 
 export async function getGames(accessToken: string) {
-  const response = await axios.post(imdbPath, '', {
+  const response = await axios.post(igdbPath, '', {
     headers: {
       'Client-ID': String(process.env.TWITCH_CLIENT_ID),
       Authorization: `Bearer ${accessToken}`,
@@ -19,7 +19,21 @@ export async function getMostPopularGamesOfLastDecade(accessToken: string) {
   sort total_rating_count desc;
   limit 8;`;
 
-  const response = await axios.post(imdbPath, queryFilter, {
+  const response = await axios.post(igdbPath, queryFilter, {
+    headers: {
+      'Client-ID': String(process.env.TWITCH_CLIENT_ID),
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+
+  return response.data;
+}
+
+export async function getGameInformation(accessToken: string, slug: string) {
+  const queryFilter = `fields name, rating, slug, summary, cover.id, cover.game, cover.height, cover.url, cover.width;
+  where slug = "${slug}";`;
+
+  const response = await axios.post(igdbPath, queryFilter, {
     headers: {
       'Client-ID': String(process.env.TWITCH_CLIENT_ID),
       Authorization: `Bearer ${accessToken}`,

@@ -21,4 +21,10 @@ export async function authRoute() {
 
     reply.code(code).send(body);
   });
+
+  server.post('/api/auth/retrieve', async (request: FastifyRequest, reply: FastifyReply) => {
+    const { code, body } = await authController.retrieveUserByToken(request);
+
+    reply.code(code).send(body);
+  });
 }

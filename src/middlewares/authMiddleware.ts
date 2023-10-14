@@ -13,9 +13,7 @@ export const authMiddleware = {
       reply.code(401).send({ message: 'Unauthorized: token missing.' });
     }
 
-    const user = userService.verifyToken(token);
-
-    if (!user) {
+    if (!userService.verifyToken(token as string)) {
       reply.code(404).send({ message: 'Unauthorized: invalid token.' });
     }
 

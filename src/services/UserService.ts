@@ -3,6 +3,15 @@ import jwt from 'jsonwebtoken';
 
 import { User } from '../models/UserModel';
 import { UserRepository } from '../repositories/UserRepository';
+import { UserDTO } from '../dtos/UserDTO';
+
+interface DecodedToken {
+  id: number;
+  name: string;
+  email: string;
+  iat: number;
+  exp: number;
+}
 
 export class UserService {
   repository: UserRepository;
@@ -30,28 +39,55 @@ export class UserService {
   }
 
   async login(email: string, password: string) {
-    const user = await this.repository.findByEmail(email);
+    const user = await this.repository.findByEmailAndPassword(email, password);
 
     if (!user) {
-      throw new Error('User not found.');
+      throw new Error('User not found!');
     }
 
-    const isSamePassword = bcrypt.compareSync(password, user.password);
+    const generatedToken = jwt.sign(
+      {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+      },
+      String(process.env.JWT_SECRET),
+      { expiresIn: '1d' },
+    );
 
-    if (!isSamePassword) {
-      throw new Error('Wrong password.');
-    }
-
-    const token = jwt.sign({ id: user.id, email: user.email }, String(process.env.JWT_SECRET), { expiresIn: '1d' });
-
-    return { token, user };
+    return new UserDTO({
+      token: generatedToken,
+      user: {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        password: user.password,
+      },
+    });
   }
 
-  verifyToken(token: any) {
-    const jwtSecret = String(process.env.JWT_SECRET);
-    const decodedToken = jwt.verify(token, jwtSecret) as any;
-    const user = this.repository.findByEmail(decodedToken.email);
+  async retrieveUserByToken(token: string) {
+    const decodedToken = (await this.verifyToken(token)) as DecodedToken;
 
-    return user;
+    return new UserDTO({
+      user: {
+        name: decodedToken.name,
+        email: decodedToken.email,
+      },
+    });
+  }
+
+  async verifyToken(token: any) {
+    const jwtSecret = String(process.env.JWT_SECRET);
+
+    // token += 'asashjhfjhfs';
+
+    try {
+      const decodedToken = jwt.verify(token, jwtSecret);
+      return decodedToken;
+    } catch (error: any) {
+      console.error(error);
+      throw new Error(error.message);
+    }
   }
 }

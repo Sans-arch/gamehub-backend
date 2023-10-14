@@ -2,9 +2,9 @@ import axios from 'axios';
 
 import { Game } from '../models/GameModel';
 import { getOAuthTokenFromTwitch } from './twitchService';
-import { getMostPopularGamesOfLastDecade } from './igdbService';
+import { getMostPopularGamesOfLastDecade, getGameInformation } from './igdbService';
 
-export async function getAllGamesFromExternalAPI() {
+async function getAllGamesFromExternalAPI() {
   try {
     const apiPath = `${process.env.EXTERNAL_GAMEDB_API_HOST}/games`;
 
@@ -23,8 +23,16 @@ export async function getAllGamesFromExternalAPI() {
   }
 }
 
-export async function getMostPopularFromLastDecadeFromIGDB() {
+async function getMostPopularFromLastDecadeFromIGDB() {
   const accessToken = await getOAuthTokenFromTwitch();
 
   return getMostPopularGamesOfLastDecade(accessToken);
 }
+
+async function getGameInfo(slug: string) {
+  const accessToken = await getOAuthTokenFromTwitch();
+
+  return getGameInformation(accessToken, slug);
+}
+
+export { getAllGamesFromExternalAPI, getMostPopularFromLastDecadeFromIGDB, getGameInfo };

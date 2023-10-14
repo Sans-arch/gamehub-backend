@@ -1,21 +1,31 @@
-import { User } from '../models/UserModel';
-
 interface IUserDTOConstructor {
-  token: string;
-  user: User;
+  token?: string;
+  user: {
+    id?: string | number;
+    name: string;
+    email: string;
+    password?: string;
+  };
 }
 
 export class UserDTO {
-  id?: string;
-  name: string;
-  email: string;
-  token: string;
+  token?: string;
+  user: {
+    id?: string;
+    name: string;
+    email: string;
+  };
 
   constructor({ token, user }: IUserDTOConstructor) {
     const { name, email } = user;
 
-    this.name = name;
-    this.email = email;
-    this.token = token;
+    if (token) {
+      this.token = token;
+    }
+
+    this.user = {
+      email: email,
+      name: name,
+    };
   }
 }

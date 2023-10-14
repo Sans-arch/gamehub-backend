@@ -12,6 +12,17 @@ export class UserRepository {
     return user;
   }
 
+  async findByEmailAndPassword(email: string, password: string) {
+    const user = await prisma.user.findUnique({
+      where: {
+        email: email,
+        password: password,
+      },
+    });
+
+    return user;
+  }
+
   async save(user: User) {
     const createdUser = await prisma.user.create({
       data: {
