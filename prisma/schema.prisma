@@ -11,9 +11,19 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  name String
-  email String @unique
-  password String
-  created_at DateTime @default(now())
+  id         Int          @id @default(autoincrement())
+  name       String
+  email      String       @unique
+  password   String
+  created_at DateTime     @default(now())
+  CustomList CustomList[]
+}
+
+model CustomList {
+  id               Int      @id @default(autoincrement())
+  id_external_igdb String
+  user_id          Int
+  added_date       DateTime @default(now())
+  // Outros campos relacionados aos jogos, se for necessário
+  user             User     @relation(fields: [user_id], references: [id])
 }
