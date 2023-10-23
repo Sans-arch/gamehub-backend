@@ -8,23 +8,24 @@ interface List {
 
 export class ListRepository {
   async save(list: List) {
-    const customlist = await prisma.customList.create({
+    const customList = await prisma.customList.create({
       data: {
         description: list.description,
-        user: {
-          connect: {
-            id: list.userId,
-          },
-        },
-        games: {
-          create: list.selectedGamesIds.map(game => ({ id_igdb: String(game) })),
-        },
-      },
-      include: {
-        games: true,
+        user_id: list.userId,
       },
     });
 
-    return customlist;
+    console.log({ list });
+
+    list.selectedGamesIds.forEach(async gameId => {
+      await prisma.gamesOnCustomLists.create({
+        data: {
+          customListId: customList.id,
+          gameId: gameId,
+        },
+      });
+    });
+
+    return customList;
   }
 }

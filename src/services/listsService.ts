@@ -14,19 +14,7 @@ export async function getAllListsFromUser() {
   return [];
 }
 
-export async function createList({ userEmail, description, selectedGamesIds }: CreateListProps): Promise<
-  {
-    games: {
-      id: number;
-      id_igdb: string;
-    }[];
-  } & {
-    id: number;
-    description: string;
-    user_id: number;
-    added_date: Date;
-  }
-> {
+export async function createList({ userEmail, description, selectedGamesIds }: CreateListProps): Promise<any> {
   const user = await userRepository.findByEmail(userEmail);
 
   const createdCustomList = await listRepository.save({

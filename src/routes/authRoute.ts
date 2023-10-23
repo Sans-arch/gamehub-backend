@@ -3,7 +3,7 @@ import { FastifyReply, FastifyRequest } from 'fastify';
 import { server } from '../index';
 import { UserRepository } from '../repositories/UserRepository';
 import { UserService } from '../services/UserService';
-import { AuthController } from '../auth/AuthController';
+import { AuthController } from '../auth/authController';
 
 const userRepository = new UserRepository();
 const userService = new UserService(userRepository);

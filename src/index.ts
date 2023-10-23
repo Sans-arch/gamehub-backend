@@ -15,7 +15,7 @@ export const server = fastify({
 
 const corsOptions = {
   credentials: true,
-  origin: String(process.env.APP_CORS_ALLOWED_ORIGINS),
+  // origin: String(process.env.APP_CORS_ALLOWED_ORIGINS),
 };
 
 server.register(cors, corsOptions);

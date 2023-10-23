@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-import { User } from '../models/UserModel';
+import { User } from '../models/userModel';
 import { UserRepository } from '../repositories/UserRepository';
 import { UserDTO } from '../dtos/UserDTO';
 

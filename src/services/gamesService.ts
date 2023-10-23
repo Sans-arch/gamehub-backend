@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { Game } from '../models/GameModel';
+import { Game } from '../models/gameModel';
 import { getOAuthTokenFromTwitch } from './twitchService';
 import { getMostPopularGamesOfLastDecade, getGameInformation } from './igdbService';
 

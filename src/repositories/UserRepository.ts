@@ -1,4 +1,4 @@
-import { User } from '../models/UserModel';
+import { User } from '../models/userModel';
 import prisma from './prisma';
 
 export class UserRepository {

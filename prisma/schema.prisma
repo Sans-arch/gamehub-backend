@@ -25,18 +25,20 @@ model CustomList {
   user_id          Int
   added_date       DateTime @default(now())
   user             User     @relation(fields: [user_id], references: [id])
-  games            GameCustomList[]
+  games            GamesOnCustomLists[]
 }
 
 model Game {
   id Int @id @default(autoincrement())
   id_igdb String
+  lists GamesOnCustomLists[]
 }
 
-model GameCustomList {
-  id Int @id @default(autoincrement())
-  list CustomList @relation(fields: [listId], references: [id])
-  listId Int
-  game Game
+model GamesOnCustomLists {
+  customList CustomList @relation(fields: [customListId], references: [id])
+  customListId Int
+  game Game @relation(fields: [gameId], references: [id])
   gameId Int
+
+  @@id([customListId, gameId])
 }
