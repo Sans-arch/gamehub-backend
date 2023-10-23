@@ -17,7 +17,7 @@ export async function getMostPopularGamesOfLastDecade(accessToken: string) {
   const queryFilter = `fields name, rating, slug, summary, cover.id, cover.game, cover.height, cover.url, cover.width;
   where first_release_date > 315360000  & total_rating_count > 0;
   sort total_rating_count desc;
-  limit 8;`;
+  limit 20;`;
 
   const response = await axios.post(igdbPath, queryFilter, {
     headers: {

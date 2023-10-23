@@ -21,9 +21,22 @@ model User {
 
 model CustomList {
   id               Int      @id @default(autoincrement())
-  id_external_igdb String
+  description      String
   user_id          Int
   added_date       DateTime @default(now())
-  // Outros campos relacionados aos jogos, se for necessário
   user             User     @relation(fields: [user_id], references: [id])
+  games            GameCustomList[]
+}
+
+model Game {
+  id Int @id @default(autoincrement())
+  id_igdb String
+}
+
+model GameCustomList {
+  id Int @id @default(autoincrement())
+  list CustomList @relation(fields: [listId], references: [id])
+  listId Int
+  game Game
+  gameId Int
 }

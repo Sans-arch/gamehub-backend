@@ -3,6 +3,6 @@
   "ext": "ts",
   "exec": "ts-node ./src/index.ts",
   "events": {
-    "start": "clear"
+    "start": "cls"
   }
 }

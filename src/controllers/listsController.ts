@@ -2,7 +2,9 @@ import { FastifyRequest, FastifyReply } from 'fastify';
 import { getAllListsFromUser, createList } from '../services/listsService';
 
 interface CreateUserListRequestBody {
+  userEmail: string;
   description: string;
+  selectedGamesIds: number[];
 }
 
 async function getUserLists(request: FastifyRequest, reply: FastifyReply) {
@@ -12,9 +14,9 @@ async function getUserLists(request: FastifyRequest, reply: FastifyReply) {
 }
 
 async function createUserList(request: FastifyRequest, reply: FastifyReply) {
-  const { description } = request.body as CreateUserListRequestBody;
+  const { userEmail, description, selectedGamesIds } = request.body as CreateUserListRequestBody;
 
-  const createdList = await createList({ description });
+  const createdList = await createList({ userEmail, description, selectedGamesIds });
 
   return reply.code(201).send(createdList);
 }
