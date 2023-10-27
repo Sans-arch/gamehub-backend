@@ -80,8 +80,6 @@ export class UserService {
   async verifyToken(token: any) {
     const jwtSecret = String(process.env.JWT_SECRET);
 
-    // token += 'asashjhfjhfs';
-
     try {
       const decodedToken = jwt.verify(token, jwtSecret);
       return decodedToken;

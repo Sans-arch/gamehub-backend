@@ -3,7 +3,7 @@ import prisma from './prisma';
 
 export class UserRepository {
   async findByEmail(email: string) {
-    const user = await prisma.user.findUnique({
+    const user = await prisma.profile.findUnique({
       where: {
         email: email,
       },
@@ -13,7 +13,7 @@ export class UserRepository {
   }
 
   async findByEmailAndPassword(email: string, password: string) {
-    const user = await prisma.user.findUnique({
+    const user = await prisma.profile.findUnique({
       where: {
         email: email,
         password: password,
@@ -24,7 +24,7 @@ export class UserRepository {
   }
 
   async save(user: User) {
-    const createdUser = await prisma.user.create({
+    const createdUser = await prisma.profile.create({
       data: {
         name: user.name,
         email: user.email,

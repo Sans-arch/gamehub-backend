@@ -4,7 +4,7 @@ import { getAllListsFromUser, createList } from '../services/listsService';
 interface CreateUserListRequestBody {
   userEmail: string;
   description: string;
-  selectedGamesIds: number[];
+  selectedGamesIds: string[];
 }
 
 async function getUserLists(request: FastifyRequest, reply: FastifyReply) {

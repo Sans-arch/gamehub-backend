@@ -1,31 +1,58 @@
 import prisma from './prisma';
 
+import { GameRepository } from './GameRepository';
+
 interface List {
   description: string;
   userId: number;
-  selectedGamesIds: number[];
+  selectedGamesIds: string[];
 }
 
+const gameRepository = new GameRepository();
+
 export class ListRepository {
+  async findByDescription(description: string) {
+    const list = await prisma.list.findFirst({
+      where: {
+        description: description,
+      }
+    });
+
+    return list;
+  }
+
+
   async save(list: List) {
-    const customList = await prisma.customList.create({
+    const createdGames = await Promise.all(list.selectedGamesIds.map(async gameId => {
+      return await gameRepository.save({
+        id_igdb: String(gameId)
+      });
+    }));
+
+    const newList = await prisma.list.create({
       data: {
         description: list.description,
-        user_id: list.userId,
+        gamelist: {
+          create: createdGames.map((gameId) => ({
+            game: {
+              connect: {
+                id: gameId.id
+              }
+            },
+            profile: {
+              connect: {
+                id: list.userId
+              }
+            },
+          }),
+          )
+        }
+      },
+      include: {
+        gamelist: true,
       },
     });
 
-    console.log({ list });
-
-    list.selectedGamesIds.forEach(async gameId => {
-      await prisma.gamesOnCustomLists.create({
-        data: {
-          customListId: customList.id,
-          gameId: gameId,
-        },
-      });
-    });
-
-    return customList;
+    return newList;
   }
 }
