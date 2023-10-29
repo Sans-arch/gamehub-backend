@@ -1,8 +1,9 @@
 import { FastifyRequest, FastifyReply, DoneFuncWithErrOrRes } from 'fastify';
 import { UserService } from '../services/UserService';
-import { UserRepository } from '../repositories/UserRepository';
+import { UserRepository } from '../repositories/UserRepository/types';
+import { PrismaUserRepository } from '../repositories/UserRepository/UserRepository';
 
-const userRepository = new UserRepository();
+const userRepository: UserRepository = new PrismaUserRepository();
 const userService = new UserService(userRepository);
 
 export const authMiddleware = {
