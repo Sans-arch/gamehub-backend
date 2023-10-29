@@ -1,6 +1,6 @@
 import { FastifyRequest } from 'fastify/types/request';
 import { UserService } from '../services/UserService';
-import { CreateUserRequest, LoginUserRequest, RetrieveUserRequest } from './types';
+import { CreateUserRequest, LoginUserRequest, RetrieveUserRequest, RevogueTokenRequest } from './types';
 
 interface ResponsePattern {
   code: number;
@@ -81,5 +81,36 @@ export class AuthController {
       code: 200,
       body: userDTO,
     };
+  }
+
+  async revogueToken(request: FastifyRequest): Promise<ResponsePattern> {
+    const { token } = request.body as RevogueTokenRequest;
+
+    if (!token) {
+      return {
+        code: 400,
+        body: {
+          message: "Token JWT ausente na solicitação"
+        }
+      }
+    }
+
+    const isRevogued = await this.userService.revogueToken(token);
+
+    if (!isRevogued) {
+      return {
+        code: 400,
+        body: {
+          message: "Token JWT não foi revogado!"
+        }
+      }
+    }
+
+    return {
+      code: 200,
+      body: {
+        message: "Token JWT revogado com sucesso!"
+      }
+    }
   }
 }

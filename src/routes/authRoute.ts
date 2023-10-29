@@ -27,4 +27,10 @@ export async function authRoute() {
 
     reply.code(code).send(body);
   });
+
+  server.post('/api/auth/logout', async (request: FastifyRequest, reply: FastifyReply) => {
+    const { code, body } = await authController.revogueToken(request);
+
+    reply.code(code).send(body);
+  });
 }

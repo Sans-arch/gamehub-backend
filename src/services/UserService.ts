@@ -13,6 +13,9 @@ interface DecodedToken {
   exp: number;
 }
 
+// Simula o armazenamento de tokens de usuário (você deve substituir isso por um banco de dados real).
+const userTokens: any = {};
+
 export class UserService {
   repository: UserRepository;
 
@@ -45,15 +48,12 @@ export class UserService {
       throw new Error('User not found!');
     }
 
-    const generatedToken = jwt.sign(
-      {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-      },
-      String(process.env.JWT_SECRET),
-      { expiresIn: '1d' },
-    );
+    const generatedToken = generateToken({ id: user.id, name: user.name, email: user.email });
+
+    // Armazene o token associado ao usuário (isso é importante para revogar o token mais tarde)
+    userTokens[user.email] = generatedToken;
+
+    console.log({ userTokens })
 
     return new UserDTO({
       token: generatedToken,
@@ -61,7 +61,6 @@ export class UserService {
         id: user.id,
         email: user.email,
         name: user.name,
-        password: user.password,
       },
     });
   }
@@ -88,4 +87,39 @@ export class UserService {
       throw new Error(error.message);
     }
   }
+
+  async revogueToken(token: string): Promise<boolean> {
+    const { email } = jwt.decode(token) as DecodedToken;
+
+    if (userTokens[email] && userTokens[email] === token) {
+      delete userTokens[email];
+
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+type generateTokenProps = {
+  id: number,
+  name: string,
+  email: string
+}
+
+enum JWT_EXPIRES {
+  ONE_HOUR = "1h",
+  ONE_DAY = "1d"
+}
+
+function generateToken({ id, name, email }: generateTokenProps) {
+  return jwt.sign({
+    id: id,
+    name: name,
+    email: email
+  },
+    String(process.env.JWT_SECRET),
+    {
+      expiresIn: JWT_EXPIRES.ONE_HOUR
+    });
 }
