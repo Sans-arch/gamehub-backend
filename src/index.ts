@@ -3,9 +3,9 @@ import fastify from 'fastify';
 import cors from '@fastify/cors';
 import formBody from '@fastify/formbody';
 
-import { gamesRoute } from './routes/gamesRoute';
-import { authRoute } from './routes/authRoute';
-import { listsRoute } from './routes/listsRoute';
+import { gamesRoute } from './app/routes/gamesRoute';
+import { authRoute } from './app/routes/authRoute';
+import { listsRoute } from './app/routes/listsRoute';
 
 dotenv.config();
 

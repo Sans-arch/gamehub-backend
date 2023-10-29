@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 
-import { server } from '../index';
+import { server } from '../../index';
 import { UserRepository } from '../repositories/UserRepository';
 import { UserService } from '../services/UserService';
 import { AuthController } from '../auth/authController';
