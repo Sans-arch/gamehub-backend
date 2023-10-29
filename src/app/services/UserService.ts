@@ -65,7 +65,7 @@ export class UserService {
   }
 
   async retrieveUserByToken(token: string): Promise<UserResponseDTO> {
-    const decodedToken = (await this.verifyToken(token)) as DecodedToken;
+    const decodedToken = this.verifyToken(token) as DecodedToken;
 
     return {
       user: {
@@ -75,7 +75,7 @@ export class UserService {
     }
   }
 
-  async verifyToken(token: any) {
+  verifyToken(token: any) {
     const jwtSecret = String(process.env.JWT_SECRET);
 
     try {
