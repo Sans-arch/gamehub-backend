@@ -13,7 +13,6 @@ interface DecodedToken {
   exp: number;
 }
 
-// Simula o armazenamento de tokens de usuário (você deve substituir isso por um banco de dados real).
 const userTokens: any = {};
 
 export class UserService {

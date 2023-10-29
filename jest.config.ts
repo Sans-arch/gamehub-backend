@@ -12,11 +12,17 @@ const config: Config.InitialOptions = {
   testMatch: [`${baseTestDir}/**/*.ts`],
   testPathIgnorePatterns: [
     "/node_modules/",
-    `${baseDir}/@types`
+    `${baseDir}/@types`,
+    `${baseDir}/repositories/prisma.ts`,
+    `${baseDir}/services/external`,
+    `${baseDir}/routes`,
   ],
   coveragePathIgnorePatterns: [
     "/node_modules/",
-    `${baseDir}/@types`
+    `${baseDir}/@types`,
+    `${baseDir}/repositories/prisma.ts`,
+    `${baseDir}/services/external`,
+    `${baseDir}/routes`,
   ]
 };
 

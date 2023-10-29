@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 import { Game } from '../models/gameModel';
-import { getOAuthTokenFromTwitch } from './twitchService';
-import { getMostPopularGamesOfLastDecade, getGameInformation } from './igdbService';
+import { getOAuthTokenFromTwitch } from './external/twitchService';
+import { getMostPopularGamesOfLastDecade, getGameInformation } from './external/igdbService';
 
 async function getAllGamesFromExternalAPI() {
   try {

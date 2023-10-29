@@ -11,7 +11,6 @@ interface IUserDTOConstructor {
 export class UserDTO {
   token?: string;
   user: {
-    id?: string;
     name: string;
     email: string;
   };
