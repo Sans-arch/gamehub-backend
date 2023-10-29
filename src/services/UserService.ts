@@ -50,10 +50,7 @@ export class UserService {
 
     const generatedToken = generateToken({ id: user.id, name: user.name, email: user.email });
 
-    // Armazene o token associado ao usuário (isso é importante para revogar o token mais tarde)
     userTokens[user.email] = generatedToken;
-
-    console.log({ userTokens })
 
     return new UserDTO({
       token: generatedToken,
