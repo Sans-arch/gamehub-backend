@@ -1,9 +1,8 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-import { User } from '../models/userModel';
-import { UserRepository } from '../repositories/UserRepository';
-import { UserDTO } from '../dtos/UserDTO';
+import { UserRepository } from '../repositories/UserRepository/types';
+import { UserPersistDTO, UserResponseDTO } from '../dtos/UserDTO';
 
 interface DecodedToken {
   id: number;
@@ -29,18 +28,22 @@ export class UserService {
       throw new Error('This email was already used by another user.');
     }
 
-    const newUser = new User({
+    const userToBeCreated: UserPersistDTO = {
       name,
       email,
-      password: bcrypt.hashSync(password, 10),
-    });
+      password: bcrypt.hashSync(password, 10)
+    };
 
-    await this.repository.save(newUser);
+    const createdUser = await this.repository.save(userToBeCreated);
 
-    return newUser;
+    if (!createdUser) {
+      throw new Error('Cannot create user!');
+    }
+
+    return createdUser;
   }
 
-  async login(email: string, password: string) {
+  async login(email: string, password: string): Promise<UserResponseDTO> {
     const user = await this.repository.findByEmailAndPassword(email, password);
 
     if (!user) {
@@ -51,25 +54,25 @@ export class UserService {
 
     userTokens[user.email] = generatedToken;
 
-    return new UserDTO({
+    return {
       token: generatedToken,
       user: {
         id: user.id,
         email: user.email,
-        name: user.name,
-      },
-    });
+        name: user.name
+      }
+    }
   }
 
-  async retrieveUserByToken(token: string) {
+  async retrieveUserByToken(token: string): Promise<UserResponseDTO> {
     const decodedToken = (await this.verifyToken(token)) as DecodedToken;
 
-    return new UserDTO({
+    return {
       user: {
-        name: decodedToken.name,
         email: decodedToken.email,
-      },
-    });
+        name: decodedToken.name
+      }
+    }
   }
 
   async verifyToken(token: any) {

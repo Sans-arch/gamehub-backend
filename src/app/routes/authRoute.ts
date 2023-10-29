@@ -1,11 +1,11 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 
 import { server } from '../../index';
-import { UserRepository } from '../repositories/UserRepository';
+import { PrismaUserRepository } from '../repositories/UserRepository/UserRepository';
 import { UserService } from '../services/UserService';
 import { AuthController } from '../auth/authController';
 
-const userRepository = new UserRepository();
+const userRepository = new PrismaUserRepository();
 const userService = new UserService(userRepository);
 const authController = new AuthController(userService);
 

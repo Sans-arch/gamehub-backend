@@ -1,4 +1,4 @@
-import { Game, IExternalGameFormat } from '../../app/models/gameModel';
+import { Game, IExternalGameFormat } from '../../app/models/GameModel';
 
 describe('Game Model test suite', () => {
 

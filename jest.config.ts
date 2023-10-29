@@ -16,6 +16,9 @@ const config: Config.InitialOptions = {
     `${baseDir}/repositories/prisma.ts`,
     `${baseDir}/services/external`,
     `${baseDir}/routes`,
+    `${baseDir}/controllers`,
+    `${baseDir}/middlewares`,
+    `${baseDir}/auth`,
   ],
   coveragePathIgnorePatterns: [
     "/node_modules/",
@@ -23,6 +26,9 @@ const config: Config.InitialOptions = {
     `${baseDir}/repositories/prisma.ts`,
     `${baseDir}/services/external`,
     `${baseDir}/routes`,
+    `${baseDir}/controllers`,
+    `${baseDir}/middlewares`,
+    `${baseDir}/auth`,
   ]
 };
 

@@ -1,5 +1,7 @@
-import { ListRepository } from '../repositories/ListRepository';
-import { UserRepository } from '../repositories/UserRepository';
+import { PrismaListRepository } from '../repositories/ListRepository/ListRepository';
+import { PrismaUserRepository } from '../repositories/UserRepository/UserRepository';
+import { ListRepository } from '../repositories/ListRepository/types';
+import { UserRepository } from '../repositories/UserRepository/types';
 
 interface CreateListProps {
   userEmail: string;
@@ -10,11 +12,13 @@ interface CreateListProps {
 interface CreatedListDTO {
   id: number;
   description: string;
-  gameList: any[];
+  gameList: {
+    id: number;
+  }[];
 }
 
-const userRepository = new UserRepository();
-const listRepository = new ListRepository();
+const listRepository: ListRepository = new PrismaListRepository();
+const userRepository: UserRepository = new PrismaUserRepository();
 
 export async function getAllListsFromUser() {
   return [];
@@ -35,12 +39,20 @@ export async function createList({ userEmail, description, selectedGamesIds }: C
     selectedGamesIds: selectedGamesIds,
   });
 
+  if (!createdCustomList) {
+    throw new Error('Cannot create List!');
+  }
+
+  if (!createdCustomList.gameList) {
+    throw new Error('Empty game list!');
+  }
+
   return {
-    id: createdCustomList.id,
+    id: createdCustomList?.id,
     description: createdCustomList.description,
-    gameList: createdCustomList.gamelist.map(game => {
+    gameList: createdCustomList.gameList.map(game => {
       return {
-        id: game.gameid,
+        id: game.gameId
       }
     })
   }

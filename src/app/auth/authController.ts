@@ -1,10 +1,15 @@
 import { FastifyRequest } from 'fastify/types/request';
 import { UserService } from '../services/UserService';
-import { CreateUserRequest, LoginUserRequest, RetrieveUserRequest, RevogueTokenRequest } from './types';
+import { LoginUserRequest, RetrieveUserRequest, RevogueTokenRequest } from './types';
+import { UserRequestDTO, UserResponseDTO } from '../dtos/UserDTO';
 
-interface ResponsePattern {
+interface ResponsePattern<T> {
   code: number;
-  body: any;
+  body: T;
+}
+
+interface ResponseMessage {
+  message: string;
 }
 
 export class AuthController {
@@ -14,8 +19,8 @@ export class AuthController {
     this.userService = userService;
   }
 
-  async register(request: FastifyRequest): Promise<ResponsePattern> {
-    const { name, email, password } = request.body as CreateUserRequest;
+  async register(request: FastifyRequest): Promise<ResponsePattern<UserResponseDTO | ResponseMessage>> {
+    const { name, email, password } = request.body as UserRequestDTO;
 
     if (!name || !email || !password) {
       return {
@@ -31,7 +36,13 @@ export class AuthController {
 
       return {
         code: 201,
-        body: user,
+        body: {
+          user: {
+            id: user.id,
+            email: user.email,
+            name: user.email
+          }
+        }
       };
     } catch (error: any) {
       return {
@@ -43,7 +54,7 @@ export class AuthController {
     }
   }
 
-  async login(request: FastifyRequest): Promise<ResponsePattern> {
+  async login(request: FastifyRequest): Promise<ResponsePattern<UserResponseDTO | ResponseMessage>> {
     const { email, password } = request.body as LoginUserRequest;
 
     if (!email || !password) {
@@ -72,7 +83,7 @@ export class AuthController {
     }
   }
 
-  async retrieveUserByToken(request: FastifyRequest): Promise<ResponsePattern> {
+  async retrieveUserByToken(request: FastifyRequest): Promise<ResponsePattern<UserResponseDTO | ResponseMessage>> {
     const { token } = request.body as RetrieveUserRequest;
 
     const userDTO = await this.userService.retrieveUserByToken(token);
@@ -83,7 +94,7 @@ export class AuthController {
     };
   }
 
-  async revogueToken(request: FastifyRequest): Promise<ResponsePattern> {
+  async revogueToken(request: FastifyRequest): Promise<ResponsePattern<UserResponseDTO | ResponseMessage>> {
     const { token } = request.body as RevogueTokenRequest;
 
     if (!token) {

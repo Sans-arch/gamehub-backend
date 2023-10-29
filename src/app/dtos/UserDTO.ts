@@ -1,30 +1,20 @@
-interface IUserDTOConstructor {
-  token?: string;
-  user: {
-    id?: string | number;
-    name: string;
-    email: string;
-    password?: string;
-  };
+export interface UserRequestDTO {
+  name: string;
+  email: string;
+  password: string;
 }
 
-export class UserDTO {
+export interface UserPersistDTO {
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface UserResponseDTO {
   token?: string;
   user: {
-    name: string;
+    id?: number;
     email: string;
-  };
-
-  constructor({ token, user }: IUserDTOConstructor) {
-    const { name, email } = user;
-
-    if (token) {
-      this.token = token;
-    }
-
-    this.user = {
-      email: email,
-      name: name,
-    };
-  }
+    name: string;
+  },
 }
