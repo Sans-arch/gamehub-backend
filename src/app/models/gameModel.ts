@@ -6,7 +6,7 @@ export interface IGame {
   stores: any[];
 }
 
-interface IExternalGameFormat {
+export interface IExternalGameFormat {
   name: string;
   slug: string;
   platforms: any[];
