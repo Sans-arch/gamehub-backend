@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Instale as dependências
-RUN npm install && npm cache clean --force
+RUN npm install --ignore-scripts && npm cache clean --force
 
 # Copie o restante dos arquivos da aplicação para o contêiner
 COPY . .
