@@ -5,7 +5,7 @@ describe('List Model test suite', () => {
 
     sut = new List({
       id: 1,
-      description: '',
+      description: 'abc',
     });
 
     expect(sut).toBeInstanceOf(List);
@@ -16,10 +16,22 @@ describe('List Model test suite', () => {
 
     sut = new List({
       id: 1,
-      description: '',
+      description: 'abc',
       gameList: [],
     });
 
     expect(sut).toHaveProperty('gameList');
+  });
+
+  it('should not create a List with empty description', () => {
+    let sut: List;
+
+    expect(() => {
+      sut = new List({
+        id: 1,
+        description: '',
+        gameList: [],
+      });
+    }).toThrowError('Description cannot be empty!');
   });
 });

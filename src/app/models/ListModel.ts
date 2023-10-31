@@ -23,6 +23,10 @@ export class List {
       this.gameList = gameList;
     }
 
+    if (!description.length) {
+      throw new Error('Description cannot be empty!');
+    }
+
     this.description = description;
   }
 }
