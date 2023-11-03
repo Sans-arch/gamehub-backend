@@ -1,4 +1,4 @@
-import { FastifyRequest, FastifyReply } from 'fastify';
+import { Request, Response } from 'express';
 import { getAllListsFromUser, createList } from '../services/listsService';
 
 interface CreateUserListRequestBody {
@@ -7,18 +7,18 @@ interface CreateUserListRequestBody {
   selectedGamesIds: string[];
 }
 
-async function getUserLists(request: FastifyRequest, reply: FastifyReply) {
+async function getUserLists(req: Request, res: Response) {
   const lists = await getAllListsFromUser();
 
-  return reply.code(200).send(lists);
+  return res.status(200).send(lists);
 }
 
-async function createUserList(request: FastifyRequest, reply: FastifyReply) {
-  const { userEmail, description, selectedGamesIds } = request.body as CreateUserListRequestBody;
+async function createUserList(req: Request, res: Response) {
+  const { userEmail, description, selectedGamesIds } = req.body as CreateUserListRequestBody;
 
   const createdList = await createList({ userEmail, description, selectedGamesIds });
 
-  return reply.code(201).send(createdList);
+  return res.status(201).send(createdList);
 }
 
 export { getUserLists, createUserList };

@@ -11,10 +11,8 @@ export interface UserPersistDTO {
 }
 
 export interface UserResponseDTO {
-  token?: string;
-  user: {
-    id?: number;
-    email: string;
-    name: string;
-  },
+  name?: string;
+  email?: string;
+  token: string;
+  isValid?: boolean;
 }

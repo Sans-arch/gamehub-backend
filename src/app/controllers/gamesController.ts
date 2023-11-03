@@ -1,29 +1,30 @@
-import { FastifyRequest, FastifyReply } from 'fastify';
+import { Request, Response } from 'express';
 import {
   getAllGamesFromExternalAPI,
   getMostPopularFromLastDecadeFromIGDB,
   getGameInfo,
 } from '../services/gamesService';
 
-interface GetGameQueryProps {
+
+interface GameQueryParams {
   gameSlug: string;
 }
 
-export async function getAllGames(request: FastifyRequest, reply: FastifyReply) {
+export async function getAllGames(req: Request, res: Response) {
   const games = await getAllGamesFromExternalAPI();
 
-  return reply.code(200).send(games);
+  return res.status(200).json(games);
 }
 
-export async function getMostPopular(request: FastifyRequest, reply: FastifyReply) {
+export async function getMostPopular(req: Request, res: Response) {
   const games = await getMostPopularFromLastDecadeFromIGDB();
 
-  return reply.type('application/json').code(200).send(games);
+  return res.type('application/json').status(200).json(games);
 }
 
-export async function getGame(request: FastifyRequest, reply: FastifyReply) {
-  const { gameSlug } = request.query as GetGameQueryProps;
+export async function getGame(req: Request<unknown, unknown, unknown, GameQueryParams>, res: Response) {
+  const { gameSlug } = req.query;
   const [game] = await getGameInfo(gameSlug);
 
-  return reply.type('application/json').code(200).send(game);
+  return res.type('application/json').status(200).json(game);
 }

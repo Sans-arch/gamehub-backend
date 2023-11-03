@@ -1,8 +1,9 @@
-import { server } from '../../index';
+import { Router } from 'express';
 import { getMostPopular, getGame } from '../controllers/gamesController';
 
-export async function gamesRoute() {
-  server.get('/api/games/most-popular', getMostPopular);
+const router = Router();
 
-  server.get('/api/games/get-by-slug', getGame);
-}
+router.get('/most-popular', getMostPopular);
+router.get('/get-by-slug', getGame);
+
+export default router;

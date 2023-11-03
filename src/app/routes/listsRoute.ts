@@ -1,8 +1,9 @@
+import { Router } from 'express';
 import { createUserList, getUserLists } from '../controllers/listsController';
-import { server } from '../../index';
 
-export async function listsRoute() {
-  server.get('/api/lists/getAll', getUserLists);
+const router = Router();
 
-  server.post('/api/lists', createUserList);
-}
+router.get('/api/lists/getAll', getUserLists);
+router.post('/api/lists', createUserList);
+
+export default router;
