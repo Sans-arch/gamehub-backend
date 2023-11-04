@@ -1,22 +1,36 @@
-import { FastifyRequest, FastifyReply, DoneFuncWithErrOrRes } from 'fastify';
-import userService from '../../services/userService';
+import { NextFunction, Request, Response } from "express";
+import { verify } from "jsonwebtoken";
 
-export const authMiddleware = {
-  preHandler: (request: FastifyRequest, reply: FastifyReply, done: DoneFuncWithErrOrRes) => {
-    if (request.method == 'OPTIONS') {
-      done();
-    } else {
-      const token = request.headers.authorization?.replace(/^Bearer /, '') || '';
+export interface RequestCustom extends Request {
+  userId?: string;
+}
 
-      if (!token) {
-        reply.code(401).send({ message: 'Unauthorized: token missing.' });
-      }
+type TokenPayload = {
+  id: string;
+  email: string;
+  name: string;
+  iat: number;
+  exp: number;
+}
 
-      if (!userService.validateToken(token)) {
-        reply.code(404).send({ message: 'Unauthorized: invalid token.' });
-      }
+export function AuthMiddlewares(req: RequestCustom, res: Response, next: NextFunction) {
+  const { authorization } = req.headers;
 
-      done();
-    }
-  },
-};
+  if (!authorization) {
+    return res.status(401).json({
+      message: 'Token not provided!'
+    });
+  }
+
+  const [, token] = authorization.split(" ");
+
+  try {
+    const decoded = verify(token, String(process.env.JWT_SECRET));
+    const { id } = decoded as TokenPayload;
+
+    req.userId = id;
+    next();
+  } catch (error) {
+    return res.status(401).json({ error: "Token invalid " })
+  }
+}

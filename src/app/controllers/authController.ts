@@ -1,6 +1,13 @@
-import { Request, Response } from 'express';
-import userService from '../services/userService';
+import { NextFunction, Request, Response } from 'express';
 import { UserRequestDTO } from '../dtos/UserDTO';
+import userService from '../services/userService';
+
+export interface RequestCustom extends Request {
+  user?: {
+    id: string;
+    name: string;
+  };
+}
 
 async function register(req: Request, res: Response) {
   const { name, email, password } = req.body as UserRequestDTO;
@@ -12,10 +19,11 @@ async function register(req: Request, res: Response) {
   }
 
   try {
-    const token = await userService.register(name, email, password);
+    const { token, user } = await userService.register(name, email, password);
 
     return res.status(201).json({
       token: token,
+      user: user,
     });
   } catch (error: any) {
     return res.status(400).json({
@@ -29,7 +37,7 @@ async function login(req: Request, res: Response) {
 
   if (!email || !password) {
     return res.status(400).json({
-      message: 'Email and password are required.',
+      error: 'Email and password are required!',
     });
   }
 
@@ -37,32 +45,37 @@ async function login(req: Request, res: Response) {
     const { token, user } = await userService.login(email, password);
 
     return res.status(200).json({
-      token: token,
-      user: user,
+      user,
+      token,
     });
   } catch (error: any) {
     return res.status(400).json({
-      message: error.message,
+      error: error.message,
     });
   }
 }
 
-async function verifyToken(req: Request, res: Response) {
-  const { token } = req.body;
+async function verifyToken(req: RequestCustom, res: Response, next: NextFunction) {
+  const authHeader = req.headers.authorization;
 
-  const data = await userService.validateToken(token);
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
 
-  if (!data) {
-    return res.status(400).json({
-      message: 'Token JWT não é válido',
+    try {
+      const user = await userService.validateToken(token);
+
+      req.user = user;
+      next();
+    } catch (error: any) {
+      return res.status(403).json({
+        error: error.message
+      })
+    }
+  } else {
+    return res.status(401).json({
+      error: "You are not authenticated!"
     });
   }
-
-  return res.status(200).json({
-    token: token,
-    user: data.user,
-  });
 }
-
 
 export default { register, login, verifyToken }

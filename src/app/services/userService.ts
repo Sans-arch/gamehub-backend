@@ -5,12 +5,8 @@ import { UserRepository } from '../repositories/UserRepository/types';
 import { UserPersistDTO } from '../dtos/UserDTO';
 import { PrismaUserRepository } from '../repositories/UserRepository/UserRepository';
 
-enum JWT_EXPIRES {
-  ONE_HOUR = "1h",
-  ONE_DAY = "1d"
-}
-
 const repository: UserRepository = new PrismaUserRepository();
+const jwtSecret = String(process.env.JWT_SECRET);
 
 async function register(name: string, email: string, password: string) {
   const emailRegex = /\S+@\S+\.\S+/;
@@ -37,30 +33,31 @@ async function register(name: string, email: string, password: string) {
     throw new Error('Cannot create user!');
   }
 
-  const jwtToken = jwt.sign(
-    { id: createdUser.id, email: createdUser.email, name: createdUser.name },
-    String(process.env.JWT_SECRET),
-    { expiresIn: JWT_EXPIRES.ONE_HOUR }
+  const accessToken = jwt.sign(
+    { id: createdUser.id, email: createdUser.email, name: createdUser.name }, jwtSecret, { expiresIn: "1h" }
   );
 
-  return jwtToken;
+  return {
+    token: accessToken,
+    user: {
+      id: createdUser.id,
+      name: createdUser.name,
+      email: createdUser.email
+    }
+  };
 }
 
 async function login(email: string, password: string) {
   const user = await repository.findByEmailAndPassword(email, password);
 
   if (!user) {
-    throw new Error('Invalid credentials.');
+    throw new Error('Username or password incorrect!');
   }
 
-  const jwtToken = jwt.sign(
-    { id: user.id, email: user.email, name: user.name },
-    String(process.env.JWT_SECRET),
-    { expiresIn: JWT_EXPIRES.ONE_HOUR }
-  );
+  const accessToken = jwt.sign({ id: user.id, name: user.name, email: user.email }, jwtSecret, { expiresIn: "15m" });
 
   return {
-    token: jwtToken,
+    token: accessToken,
     user: {
       id: user.id,
       name: user.name,
@@ -70,24 +67,17 @@ async function login(email: string, password: string) {
 }
 
 async function validateToken(token: string) {
-  const JWT_SECRET = String(process.env.JWT_SECRET);
+  let user: any;
 
-  try {
-    const decoded = jwt.verify(token, JWT_SECRET) as any;
+  jwt.verify(token, jwtSecret, (err, decoded) => {
+    if (err) {
+      throw new Error('Token is not valid!')
+    }
 
-    console.log({ decoded });
+    user = decoded;
+  });
 
-    return {
-      token,
-      user: {
-        id: decoded.id,
-        email: decoded.email,
-        name: decoded.name,
-      },
-    };
-  } catch (error) {
-    return false;
-  }
+  return user;
 }
 
 export default { register, login, validateToken }

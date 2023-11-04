@@ -10,7 +10,7 @@ interface CreateUserListRequestBody {
 async function getUserLists(req: Request, res: Response) {
   const lists = await getAllListsFromUser();
 
-  return res.status(200).send(lists);
+  return res.status(200).json(lists);
 }
 
 async function createUserList(req: Request, res: Response) {
