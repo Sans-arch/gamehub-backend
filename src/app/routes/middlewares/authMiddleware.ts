@@ -18,7 +18,7 @@ export function AuthMiddlewares(req: RequestCustom, res: Response, next: NextFun
 
   if (!authorization) {
     return res.status(401).json({
-      message: 'Token not provided!'
+      message: 'Token não foi provido!'
     });
   }
 
@@ -31,6 +31,6 @@ export function AuthMiddlewares(req: RequestCustom, res: Response, next: NextFun
     req.userId = id;
     next();
   } catch (error) {
-    return res.status(401).json({ error: "Token invalid " })
+    return res.status(401).json({ error: "Token inválido!" })
   }
 }

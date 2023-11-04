@@ -12,25 +12,27 @@ async function register(name: string, email: string, password: string) {
   const emailRegex = /\S+@\S+\.\S+/;
 
   if (!email.match(emailRegex)) {
-    throw new Error('Invalid email.');
+    throw new Error('Email inválido.');
   }
 
   const user = await repository.findByEmail(email);
 
   if (user) {
-    throw new Error('This email was already used by another user.');
+    throw new Error('Este email já está em uso.');
   }
+
+  const hashedPassword = bcrypt.hashSync(password, 10);
 
   const userToBeCreated: UserPersistDTO = {
     name,
     email,
-    password: bcrypt.hashSync(password, 10)
+    password: hashedPassword
   };
 
   const createdUser = await repository.save(userToBeCreated);
 
   if (!createdUser) {
-    throw new Error('Cannot create user!');
+    throw new Error('Não é possível criar usuário!');
   }
 
   const accessToken = jwt.sign(
@@ -48,13 +50,19 @@ async function register(name: string, email: string, password: string) {
 }
 
 async function login(email: string, password: string) {
-  const user = await repository.findByEmailAndPassword(email, password);
+  const user = await repository.findByEmail(email);
 
   if (!user) {
-    throw new Error('Username or password incorrect!');
+    throw new Error('Usuário não encontrado!');
   }
 
-  const accessToken = jwt.sign({ id: user.id, name: user.name, email: user.email }, jwtSecret, { expiresIn: "15m" });
+  const passwordMatch = bcrypt.compareSync(password, user.password);
+
+  if (!passwordMatch) {
+    throw new Error('Senha incorreta!');
+  }
+
+  const accessToken = jwt.sign({ id: user.id, name: user.name, email: user.email }, jwtSecret, { expiresIn: "1h" });
 
   return {
     token: accessToken,
@@ -71,7 +79,7 @@ async function validateToken(token: string) {
 
   jwt.verify(token, jwtSecret, (err, decoded) => {
     if (err) {
-      throw new Error('Token is not valid!')
+      throw new Error('Token não é válido!')
     }
 
     user = decoded;

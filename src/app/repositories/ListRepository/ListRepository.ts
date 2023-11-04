@@ -18,6 +18,31 @@ export class PrismaListRepository implements ListRepository {
     return list;
   }
 
+
+  async findByUserId(userId: number): Promise<any[] | null> {
+    const lists = await prisma.list.findMany({
+      where: {
+        gamelist: {
+          every: {
+            profileid: userId,
+          },
+        },
+      },
+      include: {
+        gamelist: {
+          where: {
+            profileid: userId,
+          },
+          include: {
+            game: true,
+          },
+        },
+      },
+    })
+
+    return lists;
+  }
+
   async save(list: ListDTO): Promise<List> {
     const createdGames = await Promise.all(list.selectedGamesIds.map(async gameId => {
       return await gameRepository.save({

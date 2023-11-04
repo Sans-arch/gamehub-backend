@@ -3,5 +3,6 @@ import { ListDTO } from '../../dtos/ListDTO';
 
 export interface ListRepository {
   findByDescription: (description: string) => Promise<List | null>;
+  findByUserId: (userId: number) => Promise<List[] | null>;
   save: (list: ListDTO) => Promise<List | null>;
 }

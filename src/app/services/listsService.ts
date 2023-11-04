@@ -20,8 +20,9 @@ interface CreatedListDTO {
 const listRepository: ListRepository = new PrismaListRepository();
 const userRepository: UserRepository = new PrismaUserRepository();
 
-export async function getAllListsFromUser() {
-  return [];
+export async function getAllListsFromUser(userId: string) {
+  const lists = await listRepository.findByUserId(Number(userId));
+  return lists;
 }
 
 export async function createList({ userEmail, description, selectedGamesIds }: CreateListProps): Promise<CreatedListDTO> {
