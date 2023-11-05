@@ -1,30 +1,22 @@
 import { Request, Response } from 'express';
-import {
-  getAllGamesFromExternalAPI,
-  getMostPopularFromLastDecadeFromIGDB,
-  getGameInfo,
-} from '../services/gamesService';
-
-
-interface GameQueryParams {
-  gameSlug: string;
-}
-
-export async function getAllGames(req: Request, res: Response) {
-  const games = await getAllGamesFromExternalAPI();
-
-  return res.status(200).json(games);
-}
+import gamesService from '../services/gamesService';
 
 export async function getMostPopular(req: Request, res: Response) {
-  const games = await getMostPopularFromLastDecadeFromIGDB();
+  const games = await gamesService.getMostPopularFromLastDecadeFromIGDB();
 
   return res.type('application/json').status(200).json(games);
 }
 
-export async function getGame(req: Request<unknown, unknown, unknown, GameQueryParams>, res: Response) {
+export async function getGame(req: Request<unknown, unknown, unknown, { gameSlug: string }>, res: Response) {
   const { gameSlug } = req.query;
-  const [game] = await getGameInfo(gameSlug);
+  const [game] = await gamesService.getGameInfo(gameSlug);
 
   return res.type('application/json').status(200).json(game);
+}
+
+export async function getGamesById(req: Request<unknown, unknown, unknown, { ids: string[] }>, res: Response) {
+  const { ids } = req.query;
+  const games = await gamesService.getGamesById(ids);
+
+  return res.type('application/json').status(200).json(games);
 }
