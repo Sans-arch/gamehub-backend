@@ -146,3 +146,4 @@ temp
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 build/
+docker-app-data-pc-host
