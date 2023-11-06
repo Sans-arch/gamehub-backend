@@ -21,8 +21,8 @@ async function getGamesById(ids: string[]) {
 
   try {
     return await Promise.all(promises);
-  } catch (error) {
-    console.log(error);
+  } catch (error: any) {
+    console.log(error.data);
   }
 }
 
