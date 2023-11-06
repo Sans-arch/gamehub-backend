@@ -1,32 +1,35 @@
-version: '3'
-services:
-  postgres:
-    image: postgres:latest
-    environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydatabase
-    ports:
-      - '5432:5432'
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+version: '3.1'
 
+services:
   app:
     container_name: gamehub-backend-app
-    restart: always
     build:
       context: .
-      dockerfile: Dockerfile.dev
-    env_file:
-      - .env
     ports:
       - '3003:3003'
+    command:
+      - sh
+      - -c
+      - |
+        npx prisma generate
+        npx prisma db push
+        npm start
+    env_file:
+      - .env
     depends_on:
-      - postgres
+      - db
+  db:
+    image: postgres:latest
+    restart: always
+    container_name: gamehub-backend-db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - ${DB_PORT}:5432
     volumes:
-      - ./:/app
-      - ignore:/app/node_modules/
+      - ./docker-app-data-pc-host:/var/lib/postgresql/data
 
 volumes:
-  postgres_data:
-  ignore:
+  docker-app-data-pc-host:

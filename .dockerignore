@@ -1,3 +1,5 @@
 # Arquivos que serão ignorados pelo Docker e não serão copiados para o WORKDIR
 node_modules/
 coverage
+build/
+docker-app-data-pc-host/
