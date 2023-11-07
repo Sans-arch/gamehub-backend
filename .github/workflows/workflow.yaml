@@ -1,0 +1,67 @@
+name: CI Build Docker-Compose Backend App
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-node-app:
+    runs-on: ubuntu-latest
+
+    env:
+      APP_PORT: ${{ secrets.APP_PORT }}
+      APP_CORS_ALLOWED_ORIGINS: ${{ secrets.APP_CORS_ALLOWED_ORIGINS }}
+      JWT_SECRET: ${{ secrets.JWT_SECRET }}
+      EXTERNAL_GAMEDB_API_KEY: ${{ secrets.EXTERNAL_GAMEDB_API_KEY }}
+      EXTERNAL_GAMEDB_API_HOST: ${{ secrets.EXTERNAL_GAMEDB_API_HOST }}
+      TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+      TWITCH_SECRET_ID: ${{ secrets.TWITCH_SECRET_ID }}
+      DB_URL: ${{ secrets.DB_URL }}
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Compose
+        run: docker-compose up -d
+
+      - name: Build Docker image
+        run: docker build -t backend-app .
+
+      - name: Wait for services to start
+        run: sleep 10
+
+      - name: Run Docker container
+        run: docker run --rm \
+          -e APP_PORT=$APP_PORT \
+          -e APP_CORS_ALLOWED_ORIGINS=$APP_CORS_ALLOWED_ORIGINS \
+          -e JWT_SECRET=$JWT_SECRET \
+          -e EXTERNAL_GAMEDB_API_KEY=$EXTERNAL_GAMEDB_API_KEY \
+          -e EXTERNAL_GAMEDB_API_HOST=$EXTERNAL_GAMEDB_API_HOST \
+          -e TWITCH_CLIENT_ID=$TWITCH_CLIENT_ID \
+          -e TWITCH_SECRET_ID=$TWITCH_SECRET_ID \
+          -e DB_URL=$DB_URL \
+          back-end-app
+
+      - name: Validate Docker Container
+        run: |
+          # Aguarde alguns segundos para que o aplicativo tenha tempo para iniciar
+          sleep 10
+
+          # Substitua o endereço e a porta pelo seu aplicativo
+          APP_URL=http://localhost:$PORT
+
+          # Verifique se o aplicativo está acessível
+          if curl -sSf $APP_URL; then
+            echo "O aplicativo está funcionando corretamente."
+          else
+            echo "Erro: O aplicativo não está acessível ou não está funcionando corretamente."
+            exit 1
+          fi
+
+      - name: Clean Up
+        run: |
+          docker-compose down
+          docker system prune -f
