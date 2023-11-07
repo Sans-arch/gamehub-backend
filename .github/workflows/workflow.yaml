@@ -30,7 +30,7 @@ jobs:
 
       - name: Set up Docker Compose
         run: |
-          DOCKER_COMPOSE_IGNORE_ENV_FILE=1 docker-compose up -d
+          docker-compose -f docker-compose-alternative.yml up -d
 
       - name: Build Docker image
         run: docker build -t backend-app .
