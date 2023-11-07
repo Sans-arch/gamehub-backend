@@ -32,23 +32,8 @@ jobs:
         run: |
           docker-compose -f docker-compose.actions.yml up -d
 
-      - name: Build Docker image
-        run: docker build -t backend-app .
-
       - name: Wait for services to start
         run: sleep 10
-
-      - name: Run Docker container
-        run: docker run --rm \
-          -e APP_PORT=$APP_PORT \
-          -e APP_CORS_ALLOWED_ORIGINS=$APP_CORS_ALLOWED_ORIGINS \
-          -e JWT_SECRET=$JWT_SECRET \
-          -e EXTERNAL_GAMEDB_API_KEY=$EXTERNAL_GAMEDB_API_KEY \
-          -e EXTERNAL_GAMEDB_API_HOST=$EXTERNAL_GAMEDB_API_HOST \
-          -e TWITCH_CLIENT_ID=$TWITCH_CLIENT_ID \
-          -e TWITCH_SECRET_ID=$TWITCH_SECRET_ID \
-          -e DB_URL=$DB_URL \
-          back-end-app
 
       - name: Validate Docker Container
         run: |
