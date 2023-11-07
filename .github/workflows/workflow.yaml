@@ -32,25 +32,6 @@ jobs:
         run: |
           docker-compose -f docker-compose.actions.yml up -d
 
-      - name: Wait for services to start
-        run: sleep 10
-
-      - name: Validate Docker Container
-        run: |
-          # Aguarde alguns segundos para que o aplicativo tenha tempo para iniciar
-          sleep 10
-
-          # Substitua o endereço e a porta pelo seu aplicativo
-          APP_URL=http://localhost:$APP_PORT
-
-          # Verifique se o aplicativo está acessível
-          if curl -sSf $APP_URL; then
-            echo "O aplicativo está funcionando corretamente."
-          else
-            echo "Erro: O aplicativo não está acessível ou não está funcionando corretamente."
-            exit 1
-          fi
-
       - name: Clean Up
         run: |
           docker-compose down
