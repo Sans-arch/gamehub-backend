@@ -30,7 +30,7 @@ jobs:
 
       - name: Set up Docker Compose
         run: |
-          docker-compose -f docker-compose-alternative.yml up -d
+          docker-compose -f docker-compose.actions.yml up -d
 
       - name: Build Docker image
         run: docker build -t backend-app .
