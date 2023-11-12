@@ -87,4 +87,22 @@ export class PrismaListRepository implements ListRepository {
       })
     };
   }
+
+  async deleteById(id: number) {
+    const deletedGameList = prisma.gamelist.deleteMany({
+      where: {
+        listid: id,
+      },
+    });
+
+    const deletedList = prisma.list.delete({
+      where: {
+        id: id,
+      },
+    });
+
+    const transaction = await prisma.$transaction([deletedGameList, deletedList])
+
+    return transaction;
+  }
 }

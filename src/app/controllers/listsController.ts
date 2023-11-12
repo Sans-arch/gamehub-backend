@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { getAllListsFromUser, createList } from '../services/listsService';
+import listsService from '../services/listsService';
 
 export interface RequestCustom extends Request {
   userId?: string;
@@ -13,7 +13,7 @@ interface CreateUserListRequestBody {
 
 async function getUserLists(req: RequestCustom, res: Response) {
   if (req.userId) {
-    const lists = await getAllListsFromUser(req.userId);
+    const lists = await listsService.getAllListsFromUser(req.userId);
     return res.status(200).json(lists);
   }
 
@@ -25,9 +25,23 @@ async function getUserLists(req: RequestCustom, res: Response) {
 async function createUserList(req: Request, res: Response) {
   const { userEmail, description, selectedGamesIds } = req.body as CreateUserListRequestBody;
 
-  const createdList = await createList({ userEmail, description, selectedGamesIds });
+  const createdList = await listsService.createList({ userEmail, description, selectedGamesIds });
 
   return res.status(201).send(createdList);
 }
 
-export { getUserLists, createUserList };
+async function deleteUserList(req: Request, res: Response) {
+  const { id } = req.params;
+
+  const deletedList = await listsService.deleteList(Number(id));
+
+  if (!deletedList) {
+    return res.status(400).json({
+      error: 'Não foi possível deletar a lista!',
+    })
+  }
+
+  return res.status(200).json(deletedList);
+}
+
+export default { getUserLists, createUserList, deleteUserList };
