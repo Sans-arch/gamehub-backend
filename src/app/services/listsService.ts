@@ -20,12 +20,12 @@ interface CreatedListDTO {
 const listRepository: ListRepository = new PrismaListRepository();
 const userRepository: UserRepository = new PrismaUserRepository();
 
-export async function getAllListsFromUser(userId: string) {
+async function getAllListsFromUser(userId: string) {
   const lists = await listRepository.findByUserId(Number(userId));
   return lists;
 }
 
-export async function createList({ userEmail, description, selectedGamesIds }: CreateListProps): Promise<CreatedListDTO> {
+async function createList({ userEmail, description, selectedGamesIds }: CreateListProps): Promise<CreatedListDTO> {
   const user = await userRepository.findByEmail(userEmail);
 
   const existingList = await listRepository.findByDescription(description);
@@ -57,4 +57,23 @@ export async function createList({ userEmail, description, selectedGamesIds }: C
       }
     })
   }
+}
+
+async function deleteList(id: number) {
+  if (!id) {
+    throw new Error('Id is required!');
+  }
+
+  try {
+    const deletedList = await listRepository.deleteById(id);
+    return deletedList;
+  } catch (error) {
+    return null;
+  }
+}
+
+export default {
+  getAllListsFromUser,
+  createList,
+  deleteList,
 }
