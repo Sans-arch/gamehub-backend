@@ -5,6 +5,35 @@ interface Game {
 }
 
 export class GameRepository {
+  async getByIgdbId(id_igdb: string) {
+    const game = await prisma.game.findFirst({
+      where: {
+        id_igdb: id_igdb
+      },
+      include: {
+        userRating: {
+          select: {
+            id: true,
+            description: true,
+            rating: true,
+            gameId: true,
+            userId: true,
+            createdAt: true,
+            user: {
+              select: {
+                id: true,
+                name: true,
+              }
+            }
+          }
+        }
+      }
+    });
+
+
+    return game;
+  }
+
   async save({ id_igdb }: Game) {
     const existingGame = await prisma.game.findFirst({
       where: {

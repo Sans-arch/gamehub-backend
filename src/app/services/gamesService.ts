@@ -1,6 +1,12 @@
 
 import { getOAuthTokenFromTwitch } from './external/twitchService';
 import igdbService from './external/igdbService';
+import { GameRepository } from '../repositories/GameRepository/GameRepository';
+import { ReviewRepository } from '../repositories/ReviewRepository/ReviewRepository';
+import { CreateReviewInput } from '../repositories/ReviewRepository/types';
+
+const reviewRepository = new ReviewRepository();
+const gameRepository = new GameRepository();
 
 async function getMostPopularFromLastDecadeFromIGDB() {
   const accessToken = await getOAuthTokenFromTwitch();
@@ -11,7 +17,15 @@ async function getMostPopularFromLastDecadeFromIGDB() {
 async function getGameInfo(slug: string) {
   const accessToken = await getOAuthTokenFromTwitch();
 
-  return igdbService.getGameInformation(accessToken, slug);
+  const [igdbGameInformation] = await igdbService.getGameInformation(accessToken, slug);
+  const gamehubGameInformation = await gameRepository.getByIgdbId(String(igdbGameInformation.id));
+
+  const gameInformation = {
+    ...igdbGameInformation,
+    usersReviews: gamehubGameInformation?.userRating,
+  };
+
+  return gameInformation;
 }
 
 async function getGamesById(ids: string[]) {
@@ -26,4 +40,17 @@ async function getGamesById(ids: string[]) {
   }
 }
 
-export default { getMostPopularFromLastDecadeFromIGDB, getGameInfo, getGamesById };
+async function createGameReview({ gameId, userId, rating, description }: CreateReviewInput) {
+  const createdGame = await gameRepository.save({ id_igdb: String(gameId) });
+
+  const createdReview = await reviewRepository.save({
+    gameId: createdGame.id,
+    userId: userId,
+    rating: rating,
+    description: description,
+  });
+
+  return createdReview;
+}
+
+export default { getMostPopularFromLastDecadeFromIGDB, getGameInfo, getGamesById, createGameReview };
