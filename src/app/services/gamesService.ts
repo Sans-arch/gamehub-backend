@@ -25,6 +25,10 @@ async function getGameInfo(slug: string) {
     usersReviews: gamehubGameInformation?.userRating,
   };
 
+  if (!gameInformation.usersReviews) {
+    gameInformation.usersReviews = [];
+  }
+
   return gameInformation;
 }
 
