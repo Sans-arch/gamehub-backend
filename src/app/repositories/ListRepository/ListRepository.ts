@@ -1,11 +1,12 @@
 import prisma from '../prisma';
 
-import { GameRepository } from '../GameRepository/GameRepository';
+import { GameRepository } from '../GameRepository/types';
+import { PrismaGameRepository } from '../GameRepository/GameRepository';
 import { ListRepository } from './types';
 import { List } from '../../models/ListModel';
 import { ListDTO } from '../../dtos/ListDTO';
 
-const gameRepository = new GameRepository();
+const gameRepository: GameRepository = new PrismaGameRepository();
 
 export class PrismaListRepository implements ListRepository {
   async findByDescription(description: string) {
@@ -45,9 +46,7 @@ export class PrismaListRepository implements ListRepository {
 
   async save(list: ListDTO): Promise<List> {
     const createdGames = await Promise.all(list.selectedGamesIds.map(async gameId => {
-      return await gameRepository.save({
-        id_igdb: String(gameId)
-      });
+      return await gameRepository.save(String(gameId));
     }));
 
     const newList = await prisma.list.create({

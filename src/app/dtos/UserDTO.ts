@@ -9,10 +9,3 @@ export interface UserPersistDTO {
   email: string;
   password: string;
 }
-
-export interface UserResponseDTO {
-  name?: string;
-  email?: string;
-  token: string;
-  isValid?: boolean;
-}

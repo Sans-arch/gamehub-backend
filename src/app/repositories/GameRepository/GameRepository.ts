@@ -1,10 +1,7 @@
 import prisma from '../prisma';
+import { GameRepository } from './types';
 
-interface Game {
-  id_igdb: string
-}
-
-export class GameRepository {
+export class PrismaGameRepository implements GameRepository {
   async getByIgdbId(id_igdb: string) {
     const game = await prisma.game.findFirst({
       where: {
@@ -34,7 +31,7 @@ export class GameRepository {
     return game;
   }
 
-  async save({ id_igdb }: Game) {
+  async save(id_igdb: string) {
     const existingGame = await prisma.game.findFirst({
       where: {
         id_igdb: id_igdb

@@ -1,12 +1,13 @@
 
 import { getOAuthTokenFromTwitch } from './external/twitchService';
 import igdbService from './external/igdbService';
-import { GameRepository } from '../repositories/GameRepository/GameRepository';
+import { GameRepository } from '../repositories/GameRepository/types';
+import { PrismaGameRepository } from '../repositories/GameRepository/GameRepository';
 import { ReviewRepository } from '../repositories/ReviewRepository/ReviewRepository';
 import { CreateReviewInput } from '../repositories/ReviewRepository/types';
 
 const reviewRepository = new ReviewRepository();
-const gameRepository = new GameRepository();
+const gameRepository: GameRepository = new PrismaGameRepository();
 
 async function getMostPopularFromLastDecadeFromIGDB() {
   const accessToken = await getOAuthTokenFromTwitch();
@@ -45,7 +46,7 @@ async function getGamesById(ids: string[]) {
 }
 
 async function createGameReview({ gameId, userId, rating, description }: CreateReviewInput) {
-  const createdGame = await gameRepository.save({ id_igdb: String(gameId) });
+  const createdGame = await gameRepository.save(String(gameId));
 
   const createdReview = await reviewRepository.save({
     gameId: createdGame.id,
