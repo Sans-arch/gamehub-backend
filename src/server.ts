@@ -11,15 +11,11 @@ dotenv.config();
 const app = express();
 
 if (process.env.NODE_ENV !== 'development') {
-  // Configurações para produção
-  const corsOptions = {
-    origin: process.env.FRONTEND_IP,
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    optionsSuccessStatus: 204,
-  };
-
-  app.use(cors(corsOptions));
+  app.use(
+    cors({
+      origin: ['http://localhost:5173', 'https://gamehub-frontend-site.onrender.com'],
+    }),
+  );
 }
 
 app.use(cors());
