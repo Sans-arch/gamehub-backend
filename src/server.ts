@@ -1,4 +1,4 @@
-import express from 'express'
+import express from 'express';
 import cors from 'cors';
 import * as dotenv from 'dotenv';
 
@@ -18,12 +18,12 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const port = Number(process.env.APP_PORT) || 5765
+const port = Number(process.env.APP_PORT) || 5765;
 
 app.use('/api/games', gamesRoute);
 app.use('/api/auth', authRoute);
 app.use('/api/lists', listsRoute);
 
 app.listen(port, () => {
-  console.log(`🚀 Application is running at port: ${port}`)
+  console.log(`🚀 Application is running at port: ${port}`);
 });
