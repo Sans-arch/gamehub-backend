@@ -1,4 +1,3 @@
-
 import { getOAuthTokenFromTwitch } from './external/twitchService';
 import igdbService from './external/igdbService';
 import { GameRepository } from '../repositories/GameRepository/types';
@@ -11,6 +10,8 @@ const gameRepository: GameRepository = new PrismaGameRepository();
 
 async function getMostPopularFromLastDecadeFromIGDB() {
   const accessToken = await getOAuthTokenFromTwitch();
+
+  console.log('accessToken', accessToken);
 
   return igdbService.getMostPopularGamesOfLastDecade(accessToken);
 }

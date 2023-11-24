@@ -1,6 +1,6 @@
 import { GameRepository } from '../../app/repositories/GameRepository/types';
 
-describe('GameRepository', () => {
+describe('GameRepository Test suite', () => {
   let gameRepository: GameRepository;
 
   beforeAll(() => {
