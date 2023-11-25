@@ -13,7 +13,5 @@ describe('GameService test suite', () => {
   it('should return a game info by slug', async () => {
     const slug = 'the-last-of-us-part-ii';
     const gameInfo = await gamesService.getGameInfo(slug);
-
-    console.log(gameInfo);
   });
 });

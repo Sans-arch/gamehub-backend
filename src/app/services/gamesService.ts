@@ -4,7 +4,7 @@ import { GameRepository } from '../repositories/GameRepository/types';
 import { ReviewRepository } from '../repositories/ReviewRepository/ReviewRepository';
 import { CreateReviewInput } from '../repositories/ReviewRepository/types';
 
-export default class GameService {
+export class GameService {
   constructor(
     private gameRepository: GameRepository,
     private reviewRepository: ReviewRepository,
@@ -15,8 +15,6 @@ export default class GameService {
 
   async getMostPopularFromLastDecadeFromIGDB() {
     const accessToken = await getOAuthTokenFromTwitch();
-
-    console.log('accessToken', accessToken);
 
     return igdbService.getMostPopularGamesOfLastDecade(accessToken);
   }
