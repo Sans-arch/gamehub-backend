@@ -1,5 +1,7 @@
 import { Request, Response } from 'express';
-import listsService from '../services/listsService';
+import { ListService } from '../services/listsService';
+import { PrismaListRepository } from '../repositories/ListRepository/ListRepository';
+import { PrismaUserRepository } from '../repositories/UserRepository/UserRepository';
 
 export interface RequestCustom extends Request {
   userId?: string;
@@ -10,6 +12,10 @@ interface CreateUserListRequestBody {
   description: string;
   selectedGamesIds: string[];
 }
+
+const listRepository = new PrismaListRepository();
+const userRepository = new PrismaUserRepository();
+const listsService = new ListService(listRepository, userRepository);
 
 async function getUserLists(req: RequestCustom, res: Response) {
   if (req.userId) {

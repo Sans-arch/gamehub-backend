@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from 'express';
 import { UserRequestDTO } from '../dtos/UserDTO';
-import userService from '../services/userService';
+import { UserService } from '../services/userService';
+import { PrismaUserRepository } from '../repositories/UserRepository/UserRepository';
+import { UserRepository } from '../repositories/UserRepository/types';
 
 export interface RequestCustom extends Request {
   user?: {
@@ -8,6 +10,9 @@ export interface RequestCustom extends Request {
     name: string;
   };
 }
+
+const userRepository: UserRepository = new PrismaUserRepository();
+const userService = new UserService(userRepository);
 
 async function register(req: Request, res: Response) {
   const { name, email, password } = req.body as UserRequestDTO;

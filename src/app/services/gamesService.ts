@@ -5,10 +5,7 @@ import { ReviewRepository } from '../repositories/ReviewRepository/ReviewReposit
 import { CreateReviewInput } from '../repositories/ReviewRepository/types';
 
 export class GameService {
-  constructor(
-    private gameRepository: GameRepository,
-    private reviewRepository: ReviewRepository,
-  ) {
+  constructor(private gameRepository: GameRepository, private reviewRepository: ReviewRepository) {
     this.gameRepository = gameRepository;
     this.reviewRepository = reviewRepository;
   }

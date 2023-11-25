@@ -1,12 +1,10 @@
 import { http, HttpResponse } from 'msw';
 
 const getOAuthTokenFromTwitch = http.post('https://id.twitch.tv/oauth2/token', () => {
-  console.log('Rota id.twicht.tv/oauth2/token interceptada com sucesso!');
   return HttpResponse.text('nananana');
 });
 
 const getGamesFromIGDB = http.post('https://api.igdb.com/v4/games', () => {
-  console.log('Rota api.igdb.com/v4/games interceptada com sucesso!');
   return HttpResponse.json([
     {
       id: 1020,

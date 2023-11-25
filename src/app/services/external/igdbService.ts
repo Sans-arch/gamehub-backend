@@ -26,8 +26,6 @@ async function getMostPopularGamesOfLastDecade(accessToken: string) {
     },
   });
 
-  console.log(response.data);
-
   return response.data;
 }
 
