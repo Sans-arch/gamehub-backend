@@ -1,6 +1,12 @@
 import { Request, Response } from 'express';
-import gamesService from '../services/gamesService';
+import { GameService } from '../services/gamesService';
 import { CreateReviewInput } from '../repositories/ReviewRepository/types';
+import { PrismaGameRepository } from '../repositories/GameRepository/GameRepository';
+import { ReviewRepository } from '../repositories/ReviewRepository/ReviewRepository';
+
+const gameRepository = new PrismaGameRepository();
+const reviewRepository = new ReviewRepository();
+const gamesService = new GameService(gameRepository, reviewRepository);
 
 export async function getMostPopular(req: Request, res: Response) {
   const games = await gamesService.getMostPopularFromLastDecadeFromIGDB();
@@ -25,7 +31,8 @@ export async function getGamesById(req: Request<unknown, unknown, unknown, { ids
 export async function createReview(req: Request, res: Response) {
   const { gameId, userId, rating, description } = req.body as CreateReviewInput;
 
-  if (!gameId || !userId || !rating || !description) return res.status(400).json({ message: 'Information is missing.' });
+  if (!gameId || !userId || !rating || !description)
+    return res.status(400).json({ message: 'Information is missing.' });
 
   const review = await gamesService.createGameReview({ gameId, userId, rating, description });
 

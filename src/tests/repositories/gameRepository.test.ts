@@ -1,6 +1,6 @@
 import { GameRepository } from '../../app/repositories/GameRepository/types';
 
-describe('GameRepository', () => {
+describe('GameRepository Test suite', () => {
   let gameRepository: GameRepository;
 
   beforeAll(() => {
@@ -15,7 +15,7 @@ describe('GameRepository', () => {
   });
 
   describe('getByIgdbId', () => {
-    it('deve retornar um jogo existente pelo ID do IGDB', async () => {
+    it('should return an existing game by id', async () => {
       const existingGame = { id_igdb: '123', userRating: [], id: 1 };
       const result = await gameRepository.getByIgdbId('123');
 

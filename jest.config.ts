@@ -7,11 +7,13 @@ const config: Config.InitialOptions = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   verbose: true,
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   collectCoverage: true,
   collectCoverageFrom: [`${baseDir}/**/*.ts`],
   testMatch: [`${baseTestDir}/**/*.ts`],
   testPathIgnorePatterns: [
-    "/node_modules/",
+    '/node_modules/',
+    '/docker-app_data-pc-host/',
     `${baseDir}/@types`,
     `${baseDir}/repositories/prisma.ts`,
     `${baseDir}/repositories/`,
@@ -22,7 +24,7 @@ const config: Config.InitialOptions = {
     `${baseDir}/auth`,
   ],
   coveragePathIgnorePatterns: [
-    "/node_modules/",
+    '/node_modules/',
     `${baseDir}/@types`,
     `${baseDir}/repositories/`,
     `${baseDir}/repositories/prisma.ts`,
@@ -31,7 +33,7 @@ const config: Config.InitialOptions = {
     `${baseDir}/controllers`,
     `${baseDir}/middlewares`,
     `${baseDir}/auth`,
-  ]
+  ],
 };
 
 export default config;

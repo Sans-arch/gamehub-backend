@@ -1,61 +1,61 @@
-
 import { getOAuthTokenFromTwitch } from './external/twitchService';
 import igdbService from './external/igdbService';
 import { GameRepository } from '../repositories/GameRepository/types';
-import { PrismaGameRepository } from '../repositories/GameRepository/GameRepository';
 import { ReviewRepository } from '../repositories/ReviewRepository/ReviewRepository';
 import { CreateReviewInput } from '../repositories/ReviewRepository/types';
 
-const reviewRepository = new ReviewRepository();
-const gameRepository: GameRepository = new PrismaGameRepository();
-
-async function getMostPopularFromLastDecadeFromIGDB() {
-  const accessToken = await getOAuthTokenFromTwitch();
-
-  return igdbService.getMostPopularGamesOfLastDecade(accessToken);
-}
-
-async function getGameInfo(slug: string) {
-  const accessToken = await getOAuthTokenFromTwitch();
-
-  const [igdbGameInformation] = await igdbService.getGameInformation(accessToken, slug);
-  const gamehubGameInformation = await gameRepository.getByIgdbId(String(igdbGameInformation.id));
-
-  const gameInformation = {
-    ...igdbGameInformation,
-    usersReviews: gamehubGameInformation?.userRating,
-  };
-
-  if (!gameInformation.usersReviews) {
-    gameInformation.usersReviews = [];
+export class GameService {
+  constructor(private gameRepository: GameRepository, private reviewRepository: ReviewRepository) {
+    this.gameRepository = gameRepository;
+    this.reviewRepository = reviewRepository;
   }
 
-  return gameInformation;
-}
+  async getMostPopularFromLastDecadeFromIGDB() {
+    const accessToken = await getOAuthTokenFromTwitch();
 
-async function getGamesById(ids: string[]) {
-  const accessToken = await getOAuthTokenFromTwitch();
+    return igdbService.getMostPopularGamesOfLastDecade(accessToken);
+  }
 
-  const promises = ids.map(id => igdbService.getById(accessToken, id));
+  async getGameInfo(slug: string) {
+    const accessToken = await getOAuthTokenFromTwitch();
 
-  try {
-    return await Promise.all(promises);
-  } catch (error: any) {
-    console.log(error.data);
+    const [igdbGameInformation] = await igdbService.getGameInformation(accessToken, slug);
+    const gamehubGameInformation = await this.gameRepository.getByIgdbId(String(igdbGameInformation.id));
+
+    const gameInformation = {
+      ...igdbGameInformation,
+      usersReviews: gamehubGameInformation?.userRating,
+    };
+
+    if (!gameInformation.usersReviews) {
+      gameInformation.usersReviews = [];
+    }
+
+    return gameInformation;
+  }
+
+  async getGamesById(ids: string[]) {
+    const accessToken = await getOAuthTokenFromTwitch();
+
+    const promises = ids.map(id => igdbService.getById(accessToken, id));
+
+    try {
+      return await Promise.all(promises);
+    } catch (error: any) {
+      console.log(error.data);
+    }
+  }
+
+  async createGameReview({ gameId, userId, rating, description }: CreateReviewInput) {
+    const createdGame = await this.gameRepository.save(String(gameId));
+
+    const createdReview = await this.reviewRepository.save({
+      gameId: createdGame.id,
+      userId: userId,
+      rating: rating,
+      description: description,
+    });
+
+    return createdReview;
   }
 }
-
-async function createGameReview({ gameId, userId, rating, description }: CreateReviewInput) {
-  const createdGame = await gameRepository.save(String(gameId));
-
-  const createdReview = await reviewRepository.save({
-    gameId: createdGame.id,
-    userId: userId,
-    rating: rating,
-    description: description,
-  });
-
-  return createdReview;
-}
-
-export default { getMostPopularFromLastDecadeFromIGDB, getGameInfo, getGamesById, createGameReview };
