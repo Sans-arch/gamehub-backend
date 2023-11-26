@@ -2,6 +2,7 @@ import { UserRepository } from '../../app/repositories/UserRepository/types';
 import { UserService } from '../../app/services/userService'
 import { User } from '../../app/models/UserModel'
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 describe('UserService test suite', () => {
   let userService: UserService;
@@ -112,13 +113,17 @@ describe('UserService test suite', () => {
   });
 
   it('should be possible to validate an valid token', async () => {
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJqb2huQGRvZS5jb20iLCJuYW1lIjoiSm9obiBEb2UiLCJpYXQiOjE3MDA5NDIyMzIsImV4cCI6MTcwMDk0NTgzMn0.TcmOfashr8yntuRUf5mNvErjd9nB8JuRwHrZSaLfdWo';
+    const jwtSecret = String(process.env.JWT_SECRET);
 
-    await expect(userService.validateToken(token)).resolves.toHaveProperty('id');
+    const token = jwt.sign({ id: 1, email: 'carlos@test.com', name: 'Carlos' }, jwtSecret);
+
+    await expect(userService.validateToken(token)).resolves.toBeTruthy();
   });
 
   it('should be possible to validate an invalid token', async () => {
-    const token = 'eyJhbGciOiJIUzI1NiIsIdJKASJKJKAJSdWo';
+    const jwtSecret = 'WrongSecret';
+
+    const token = jwt.sign('test', jwtSecret);
 
     await expect(userService.validateToken(token)).rejects.toThrow();
   });

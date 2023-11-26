@@ -12,6 +12,6 @@
     "typeRoots": ["./node_modules/@types", "./@types/"],
     "noImplicitAny": false
   },
-  "include": ["src/server.ts", "src/app/**/*.ts"],
+  "include": ["src/server.ts", "src/app/**/*.ts", "src/tests/**/*.ts"],
   "exclude": ["node_modules"]
 }

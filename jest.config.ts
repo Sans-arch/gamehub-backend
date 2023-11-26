@@ -13,6 +13,7 @@ const config: Config.InitialOptions = {
   testMatch: [`${baseTestDir}/**/*.ts`],
   testPathIgnorePatterns: [
     '/node_modules/',
+    '/docker-app_data-pc-host/',
     `${baseDir}/@types`,
     `${baseDir}/repositories/prisma.ts`,
     `${baseDir}/repositories/`,
