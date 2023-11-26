@@ -9,6 +9,7 @@ import listsRoute from './app/routes/listsRoute';
 dotenv.config();
 
 const app = express();
+app.disable('x-powered-by');
 
 const corsOptions: CorsOptions = {
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173', 'https://techsan.dev'],
