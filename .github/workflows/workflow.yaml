@@ -48,21 +48,12 @@ jobs:
           docker-compose -f docker-compose.actions.yml down
           docker system prune -f
 
-      - name: Deploy to AWS EC2
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Connect to Server
         run: |
-          mkdir -p ~/.ssh/
-          echo "$PRIVATE_KEY" > ~/.ssh/github-actions-private_key
-          chmod 600 ~/.ssh/github-actions-private_key
-          cat >>~/.ssh/config <<END
-          Host ec2
-            HostName $SSH_HOST
-            User $SSH_USER
-            IdentityFile ~/.ssh/github-actions-key
-            StrictHostKeyChecking no
-          END
-        env:
-          PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          USER_NAME: ${{secrets.USER_NAME}}
-          HOSTNAME: ${{secrets.SSH_HOST}}
-      - name: List home directory
-        run: ssh ec2 'ls -la'
+          ssh -i github-actions ${{ secrets.USER_NAME }}@${{ secrets.SSH_HOST }}
