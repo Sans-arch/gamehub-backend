@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - '5432:5432'
+      - 5432:5432
     volumes:
       - db_gamehub_volume:/var/lib/postgresql/data
 
@@ -18,7 +18,7 @@ services:
     build:
       context: .
     ports:
-      - '3003:3003'
+      - 3003:3003
     command:
       - sh
       - -c

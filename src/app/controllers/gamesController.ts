@@ -28,6 +28,18 @@ export async function getGamesById(req: Request<unknown, unknown, unknown, { ids
   return res.type('application/json').status(200).json(games);
 }
 
+export async function getGamesBySearchTerm(req: Request<unknown, unknown, unknown, { searchTerm: string }>, res: Response) {
+  const { searchTerm } = req.query;
+
+  if (!searchTerm) {
+    return res.status(400).json({ error: 'Search term is missing.' });
+  }
+
+  const games = await gamesService.getGamesBySearchTerm(searchTerm);
+
+  return res.type('application/json').status(200).json(games);
+}
+
 export async function createReview(req: Request, res: Response) {
   const { gameId, userId, rating, description } = req.body as CreateReviewInput;
 
