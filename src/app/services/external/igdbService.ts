@@ -15,7 +15,7 @@ async function getGames(accessToken: string) {
 
 async function getMostPopularGamesOfLastDecade(accessToken: string) {
   const queryFilter = `fields name, rating, slug, summary, cover.id, cover.game, cover.height, cover.url, cover.width;
-  where first_release_date > 315360000  & total_rating_count > 0;
+  where first_release_date > 315360000 & total_rating_count > 0;
   sort total_rating_count desc;
   limit 20;`;
 
@@ -57,4 +57,20 @@ async function getById(accessToken: string, id: string) {
   return response.data;
 }
 
-export default { getGames, getMostPopularGamesOfLastDecade, getGameInformation, getById };
+async function getGamesBySearchTerm(accessToken: string, searchTerm: string) {
+  const queryFilter = `fields name, rating, slug, summary, cover.id, cover.game, cover.height, cover.url, cover.width;
+  search "${searchTerm}";
+  where category = (0, 8, 9) & rating > 0;
+  `;
+
+  const response = await axios.post(igdbPath, queryFilter, {
+    headers: {
+      'Client-ID': String(process.env.TWITCH_CLIENT_ID),
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+
+  return response.data;
+}
+
+export default { getGames, getMostPopularGamesOfLastDecade, getGameInformation, getById, getGamesBySearchTerm };

@@ -1,6 +1,10 @@
 {
   "name": "gamehub-backend",
   "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Santiago Negreira"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -13,7 +17,6 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
-  "author": "Santiago Negreira",
   "license": "MIT",
   "dependencies": {
     "@prisma/client": "^5.5.2",

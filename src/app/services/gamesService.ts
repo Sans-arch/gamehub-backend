@@ -34,6 +34,12 @@ export class GameService {
     return gameInformation;
   }
 
+  async getGamesBySearchTerm(searchTerm: string) {
+    const accessToken = await getOAuthTokenFromTwitch();
+
+    return igdbService.getGamesBySearchTerm(accessToken, searchTerm);
+  }
+
   async getGamesById(ids: string[]) {
     const accessToken = await getOAuthTokenFromTwitch();
 
