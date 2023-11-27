@@ -23,6 +23,9 @@ jobs:
       DB_NAME: ${{ secrets.DB_NAME }}
       DB_SCHEMA: ${{ secrets.DB_SCHEMA }}
       DB_URL: postgresql://${{ secrets.DB_USER}}:${{secrets.DB_PASSWORD}}@${{secrets.DB_HOST}}:${{secrets.DB_PORT}}/${{secrets.DB_NAME}}?schema=${{secrets.DB_SCHEMA}}
+      PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      HOSTNAME: ${{secrets.SSH_HOST}}
+      USER_NAME: ${{secrets.USER_NAME}}
 
     steps:
       - name: Checkout Code
@@ -47,3 +50,13 @@ jobs:
         run: |
           docker-compose -f docker-compose.actions.yml down
           docker system prune -f
+
+      - name: Deploy to AWS EC2
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+
+            # Now we have got the access of EC2 and we will start the deploy .
+            echo vasco > vasco.txt
+            echo "conectei via ssh github actions"
+            '
