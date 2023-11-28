@@ -3,8 +3,6 @@ name: CI Build Docker-Compose Backend App
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build-node-app:
@@ -57,5 +55,9 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
             # Now we have got the access of EC2 and we will start the deploy .
-            echo "conectei via ssh github actions"
+            cd gamehub-backend
+            git pull
+            docker-compose build
+            docker-compose up -d --force-recreate
+            docker ps
             '
