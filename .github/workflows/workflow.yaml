@@ -3,8 +3,6 @@ name: CI Build Docker-Compose Backend App
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build-node-app:
@@ -23,6 +21,9 @@ jobs:
       DB_NAME: ${{ secrets.DB_NAME }}
       DB_SCHEMA: ${{ secrets.DB_SCHEMA }}
       DB_URL: postgresql://${{ secrets.DB_USER}}:${{secrets.DB_PASSWORD}}@${{secrets.DB_HOST}}:${{secrets.DB_PORT}}/${{secrets.DB_NAME}}?schema=${{secrets.DB_SCHEMA}}
+      PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      HOSTNAME: ${{secrets.SSH_HOST}}
+      USER_NAME: ${{secrets.USER_NAME}}
 
     steps:
       - name: Checkout Code
@@ -50,19 +51,13 @@ jobs:
 
       - name: Deploy to AWS EC2
         run: |
-          mkdir -p ~/.ssh/
-          echo "$PRIVATE_KEY" > ~/.ssh/github-actions-private_key
-          chmod 600 ~/.ssh/github-actions-private_key
-          cat >>~/.ssh/config <<END
-          Host ec2
-            HostName $SSH_HOST
-            User $SSH_USER
-            IdentityFile ~/.ssh/github-actions-key
-            StrictHostKeyChecking no
-          END
-        env:
-          PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          USER_NAME: ${{secrets.USER_NAME}}
-          HOSTNAME: ${{secrets.SSH_HOST}}
-      - name: List home directory
-        run: ssh ec2 'ls -la'
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+
+            # Now we have got the access of EC2 and we will start the deploy .
+            cd gamehub-backend
+            git pull
+            docker-compose build
+            docker-compose up -d --force-recreate
+            docker ps
+            '
