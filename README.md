@@ -1,5 +1,7 @@
 # Gamehub
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Sans-arch_gamehub-backend&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Sans-arch_gamehub-backend)
+
 ![Capa](https://github.com/Sans-arch/gamehub-backend/assets/69471715/46841f17-aac6-491d-a6de-38af3e85c0b7)
 
 Link para monitoramento da aplicação em produção:  
