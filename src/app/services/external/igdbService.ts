@@ -30,7 +30,9 @@ async function getMostPopularGamesOfLastDecade(accessToken: string) {
 }
 
 async function getGameInformation(accessToken: string, slug: string) {
-  const queryFilter = `fields name, rating, slug, summary, cover.id, cover.game, cover.height, cover.url, cover.width;
+  const queryFilter = `fields name, rating, slug, summary, first_release_date,
+  platforms.name, platforms.platform_logo.url,
+  cover.id, cover.game, cover.height, cover.url, cover.width;
   where slug = "${slug}";`;
 
   const response = await axios.post(igdbPath, queryFilter, {

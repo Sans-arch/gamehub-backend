@@ -1,13 +1,11 @@
-name: CI/CD - Build Docker-Compose app and deploy it to EC2
-
+name: CI - Testing code before merging to main
 on:
-  push:
+  pull_request:
     branches: [main]
 
 jobs:
-  build-node-app:
+  sonarcloud:
     runs-on: ubuntu-latest
-
     env:
       APP_PORT: ${{ secrets.APP_PORT }}
       APP_CORS_ALLOWED_ORIGINS: ${{ secrets.APP_CORS_ALLOWED_ORIGINS }}
@@ -21,9 +19,6 @@ jobs:
       DB_NAME: ${{ secrets.DB_NAME }}
       DB_SCHEMA: ${{ secrets.DB_SCHEMA }}
       DB_URL: postgresql://${{ secrets.DB_USER}}:${{secrets.DB_PASSWORD}}@${{secrets.DB_HOST}}:${{secrets.DB_PORT}}/${{secrets.DB_NAME}}?schema=${{secrets.DB_SCHEMA}}
-      PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      HOSTNAME: ${{secrets.SSH_HOST}}
-      USER_NAME: ${{secrets.USER_NAME}}
 
     steps:
       - name: Checkout Code
@@ -37,27 +32,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run Tests
+      - name: Run Tests with coverage
         run: npm test
 
-      - name: Set up Docker Compose
+      - name: Testing the Docker image building and container startup
         run: |
           docker-compose -f docker-compose.actions.yml up -d
 
-      - name: Clean Up
+      - name: Clean Up and Stop Docker Containers
         run: |
           docker-compose -f docker-compose.actions.yml down
           docker system prune -f
-
-      - name: Deploy to AWS EC2
-        run: |
-          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
-
-            # Now we have got the access of EC2 and we will start the deploy .
-            cd gamehub-backend
-            git pull
-            docker-compose build
-            docker-compose up -d --force-recreate
-            docker ps
-            '
