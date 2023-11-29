@@ -147,3 +147,5 @@ temp
 
 build/
 docker-app-data-pc-host
+
+.vscode
