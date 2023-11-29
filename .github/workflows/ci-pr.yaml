@@ -1,0 +1,32 @@
+name: CI - Testing code before merging to main
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests with coverage
+        run: npm test
+
+      - name: Testing the Docker image building and container startup
+        run: |
+          docker-compose -f docker-compose.actions.yml up -d
+
+      - name: Clean Up and Stop Docker Containers
+        run: |
+          docker-compose -f docker-compose.actions.yml down
+          docker system prune -f

@@ -1,4 +1,4 @@
-name: CI Build Docker-Compose Backend App
+name: CI/CD - Build Docker-Compose app and deploy it to EC2
 
 on:
   push:
