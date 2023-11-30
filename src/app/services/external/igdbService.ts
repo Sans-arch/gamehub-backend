@@ -30,7 +30,8 @@ async function getMostPopularGamesOfLastDecade(accessToken: string) {
 }
 
 async function getGameInformation(accessToken: string, slug: string) {
-  const queryFilter = `fields name, rating, slug, summary, first_release_date,
+  const queryFilter = `fields name, rating, genres.id, genres.name, slug, summary, first_release_date,
+  age_ratings, age_ratings.content_descriptions.description,
   platforms.name, platforms.platform_logo.url,
   cover.id, cover.game, cover.height, cover.url, cover.width;
   where slug = "${slug}";`;
